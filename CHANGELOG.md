@@ -7,7 +7,7 @@ All notable changes to this project will be documented in this file.
 - More Documentation
 
 ### Changed
-- Changed all entraid to azuread
+- Changed all azuread to entraid
 - Removed version and author information from every file
 
 ### Fixed
