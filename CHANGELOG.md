@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.2] - Enter the honk - 2024-08-21
+### Added
+- Better task naming for logging
+
+### Changed
+- Updated versions of required packages
+
+### Fixed
+- Resolved some errors for config collection. Specifically relating to the security contacts collection
+
+
 ## [2.0.1] - Enter the honk - 2024-07-31
 ### Added
 - More Documentation

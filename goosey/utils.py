@@ -288,8 +288,15 @@ async def get_nextlink(url, outfile, session, logger, auth):
 
 
 
-async def helper_single_object(object, params, failurefile=None, retries=5) -> None:
+async def helper_single_object(object, params, failurefile=None, retries=5, caller="") -> None:
         url, auth, logger, output_dir, session = params[0], params[1], params[2], params[3], params[4]
+
+        current_task = asyncio.current_task()
+        if "Task" in current_task.get_name():
+            task_name = object.replace("/","_").split("(")[0].split(".")[0]
+            if caller:
+                task_name = f"{caller}_{task_name}"
+            current_task.set_name(task_name)
 
         if 'token_type' not in auth or 'access_token' not in auth:
             logger.error(f"Missing token_type and access_token from auth. Did you auth correctly? (Skipping {object})")

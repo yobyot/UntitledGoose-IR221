@@ -96,13 +96,13 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
     async with maindumper.ahsession as ahsession:
         tasks = []
         if m365:
-            tasks.extend(m365dumper.data_dump(data_calls['m365']))
+            tasks.extend(m365dumper.data_dump(data_calls['m365'], "m365"))
         if entraid:
-            tasks.extend(entraiddumper.data_dump(data_calls['entraid']))
+            tasks.extend(entraiddumper.data_dump(data_calls['entraid'], "entraid"))
         if azure:
-            tasks.extend(azure_dumper.data_dump(data_calls['azure']))
+            tasks.extend(azure_dumper.data_dump(data_calls['azure'], "azure"))
         if mde:
-            tasks.extend(mdedumper.data_dump(data_calls['mde']))
+            tasks.extend(mdedumper.data_dump(data_calls['mde'], "mde"))
 
         honk_results = await asyncio.gather(*tasks)
         error_occured = False

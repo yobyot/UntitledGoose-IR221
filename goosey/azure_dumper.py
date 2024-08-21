@@ -10,6 +10,8 @@ import getpass
 import json
 import os
 import pytz
+import inspect
+from pathvalidate import sanitize_filename
 
 from azure.core.exceptions import *
 from azure.identity import AzureAuthorityHosts
@@ -491,10 +493,11 @@ class AzureDataDumper(DataDumper):
         """
         Dump D4IOT portal configs
         """
+        caller_name = asyncio.current_task().get_name()
         async with asyncio.TaskGroup() as tg:
-            tg.create_task(self._dump_portal_alerts(), name="dump_portal_alerts")
-            tg.create_task(self._dump_portal_defendersettings(), name="dump_portal_defendersettings")
-            tg.create_task(self._dump_portal_sensors(), name="dump_portal_sensors")
+            tg.create_task(self._dump_portal_alerts(), name=f"{caller_name}_portal_alerts")
+            tg.create_task(self._dump_portal_defendersettings(), name=f"{caller_name}_portal_defendersettings")
+            tg.create_task(self._dump_portal_sensors(), name=f"{caller_name}_dump_portal_sensors")
 
     async def _dump_diagnostic_settings(self) -> None:
         """
@@ -833,7 +836,11 @@ class AzureDataDumper(DataDumper):
                     storage_accounts.append(element.as_dict()['name'])
 
                 for account in storage_accounts:
-
+                    save_state_path = os.path.join(output_dir, f".{account}_savestate")
+                    save_state_set = set()
+                    if os.path.exists(save_state_path):
+                        self.logger.debug(save_state_path)
+                        save_state_set = set(json.load(open(save_state_path, "r"))["set"])
                     if self.us_gov.lower() == "true":
                         url = "https://" + account + "blob.core.usgovcloudapi.net/"
                         blob_service_client = BlobServiceClient(account_url=url, credential=self.credential)
@@ -842,16 +849,21 @@ class AzureDataDumper(DataDumper):
                         blob_service_client = BlobServiceClient(account_url=url, credential=self.credential)
                     try:
                         container_client = blob_service_client.get_container_client(container=container_name)
-                        counter = 0
-                        start_date = utc.localize((datetime.now() - timedelta(days=90)))
+                        start_date = utc.localize((datetime.now() - timedelta(days=365*2)))
                         end_date = utc.localize(datetime.now())
                         if self.date_range:
-                            start_date = dateutil.parser.parse(self.date_start)
-                            end_date = dateutil.parser.parse(self.date_end)
+                            start_date = dateutil.parser.parse(self.date_start).replace(tzinfo=utc)
+                            end_date = dateutil.parser.parse(self.date_end).replace(tzinfo=utc)
                         for blob in container_client.list_blobs():
+                            # Check the save state
+                            if str(blob.name) in save_state_set:
+                                self.logger.debug(f"blob found in save state. Continuing")
+                                continue
                             if start_date <= blob.last_modified and blob.last_modified <= end_date:
+                                self.logger.debug(f"{log_type} log present in {account} with last_modified date {blob.last_modified}")
                                 downloader = container_client.download_blob(blob)
-                                output = os.path.join(output_dir, "log_" + str(counter) + ".json")
+
+                                output = os.path.join(output_dir, "log_" + sanitize_filename(blob.name))
                                 if log_type == "nsg_flow":
                                     data = json.loads(downloader.readall().decode(("utf-8")))
                                     with open(output, 'a+', encoding='utf-8') as f:
@@ -864,7 +876,9 @@ class AzureDataDumper(DataDumper):
                                     with open(output, 'a+', encoding='utf-8') as f:
                                         for entry in lines:
                                             f.write(entry)
-                                counter+=1
+                                save_state_set.add(str(blob.name))
+                                json.dump({"set": list(save_state_set)}, open(save_state_path, "w"))
+
 
 
                     except HttpResponseError as e:
@@ -896,25 +910,34 @@ class AzureDataDumper(DataDumper):
         """
         await self.auxillary_storage_log_pull("insights-logs-bastionauditlogs", "bastion")
 
-    async def auxillary_list_all(self, func, sub_id, ops, args: Optional[str] = None) -> None:
+    async def auxillary_list_all(self, func, sub_id, ops, args: Optional[str] = None, caller="", api_version=None) -> None:
         try:
             name = str(func.__class__)
             name = name.strip("\'<>").split(".")[-1]
             if 'Operations' in name:
                 name = name.replace('Operations', "")
 
+            current_task = asyncio.current_task()
+            if "Task" in current_task.get_name():
+                task_name = name
+                if caller:
+                    task_name = f"{caller}_{name}"
+                current_task.set_name(task_name)
+
             config_dir = os.path.join(self.output_dir, sub_id, 'azure_configs')
             check_output_dir(config_dir, self.logger)
             output = os.path.join(config_dir, name + ".json")
 
             if os.path.exists(output):
-                    self.logger.debug(name + " file exists.. Proceeding without pulling.")
+                self.logger.debug(name + " file exists.. Proceeding without pulling.")
             else:
                 self.logger.info("Dumping Azure " + name + "...")
+                named_args = {}
                 if args:
-                    func = getattr(func, ops)(scope=args)
-                elif not args:
-                    func = getattr(func, ops)()
+                    named_args["scope"] = args
+                if api_version:
+                    named_args["api_version"] = api_version
+                func = getattr(func, ops)(**named_args)
 
                 for element in func:
                     if element:
@@ -938,82 +961,83 @@ class AzureDataDumper(DataDumper):
             security_client = self.security_clients[i]
             network_manager = self.network_managers[i]
             scope = "/subscriptions/" + sub_id
+            caller_name = asyncio.current_task().get_name()
+
             if self.us_gov.lower() == "false":
                 await asyncio.gather(
-                    self.auxillary_list_all(security_client.settings, sub_id, "list"),
-                    self.auxillary_list_all(security_client.security_solutions, sub_id, "list")
+                    self.auxillary_list_all(security_client.settings, sub_id, "list", caller=caller_name),
+                    self.auxillary_list_all(security_client.security_solutions, sub_id, "list", caller=caller_name)
                 )
 
             await asyncio.gather(
-                self.auxillary_list_all(security_client.alerts, sub_id, "list"),
-                self.auxillary_list_all(security_client.allowed_connections, sub_id, "list"),
-                self.auxillary_list_all(security_client.applications, sub_id, "list"),
-                self.auxillary_list_all(security_client.assessments, sub_id, "list", scope),
-                self.auxillary_list_all(security_client.auto_provisioning_settings, sub_id, "list"),
-                self.auxillary_list_all(security_client.automations, sub_id, "list"),
-                self.auxillary_list_all(security_client.compliance_results, sub_id, "list", scope),
-                self.auxillary_list_all(security_client.compliances, sub_id, "list", scope),
-                self.auxillary_list_all(security_client.discovered_security_solutions, sub_id, "list"),
-                self.auxillary_list_all(security_client.external_security_solutions, sub_id, "list"),
-                self.auxillary_list_all(security_client.governance_rules, sub_id, "list", scope),
-                self.auxillary_list_all(security_client.information_protection_policies, sub_id, "list", scope),
-                self.auxillary_list_all(security_client.jit_network_access_policies, sub_id, "list"),
-                self.auxillary_list_all(security_client.locations, sub_id, "list"),
-                self.auxillary_list_all(security_client.secure_score_controls, sub_id, "list"),
-                self.auxillary_list_all(security_client.secure_scores, sub_id, "list"),
-                self.auxillary_list_all(security_client.security_contacts, sub_id, "list"),
-                self.auxillary_list_all(security_client.sub_assessments, sub_id, "list_all", scope),
-                self.auxillary_list_all(security_client.tasks, sub_id, "list"),
-                self.auxillary_list_all(security_client.topology, sub_id, "list"),
-                self.auxillary_list_all(security_client.workspace_settings, sub_id, "list"),
-                self.auxillary_list_all(network_manager.application_gateways, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.application_security_groups, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.azure_firewall_fqdn_tags, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.azure_firewalls, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.bastion_hosts, sub_id, "list"),
-                self.auxillary_list_all(network_manager.custom_ip_prefixes, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.ddos_protection_plans, sub_id, "list"),
-                self.auxillary_list_all(network_manager.dscp_configuration, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.express_route_circuits, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.express_route_ports, sub_id, "list"),
-                self.auxillary_list_all(network_manager.firewall_policies, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.ip_allocations, sub_id, "list"),
-                self.auxillary_list_all(network_manager.ip_groups, sub_id, "list"),
-                self.auxillary_list_all(network_manager.load_balancers, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.nat_gateways, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.network_interfaces, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.network_managers, sub_id, "list_by_subscription"),
-                self.auxillary_list_all(network_manager.network_profiles, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.network_security_groups, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.network_security_perimeters, sub_id, "list_by_subscription"),
-                self.auxillary_list_all(network_manager.network_virtual_appliances, sub_id, "list"),
-                self.auxillary_list_all(network_manager.network_watchers, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.p2_svpn_gateways, sub_id, "list"),
-                self.auxillary_list_all(network_manager.private_endpoints, sub_id, "list_by_subscription"),
-                self.auxillary_list_all(network_manager.private_link_services, sub_id, "list_by_subscription"),
-                self.auxillary_list_all(network_manager.public_ip_addresses, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.public_ip_prefixes, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.route_filters, sub_id, "list"),
-                self.auxillary_list_all(network_manager.route_tables, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.security_partner_providers, sub_id, "list"),
-                self.auxillary_list_all(network_manager.service_endpoint_policies, sub_id, "list"),
-                self.auxillary_list_all(network_manager.subscription_network_manager_connections, sub_id, "list"),
-                self.auxillary_list_all(network_manager.virtual_hubs, sub_id, "list"),
-                self.auxillary_list_all(network_manager.virtual_network_taps, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.virtual_networks, sub_id, "list_all"),
-                self.auxillary_list_all(network_manager.virtual_routers, sub_id, "list"),
-                self.auxillary_list_all(network_manager.virtual_wans, sub_id, "list"),
-                self.auxillary_list_all(network_manager.vpn_gateways, sub_id, "list"),
-                self.auxillary_list_all(network_manager.vpn_server_configurations, sub_id, "list"),
-                self.auxillary_list_all(network_manager.vpn_sites, sub_id, "list"),
-                self.auxillary_list_all(network_manager.web_application_firewall_policies, sub_id, "list_all")
+                self.auxillary_list_all(security_client.alerts, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.allowed_connections, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.applications, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.assessments, sub_id, "list", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.auto_provisioning_settings, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.automations, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.compliance_results, sub_id, "list", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.compliances, sub_id, "list", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.discovered_security_solutions, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.external_security_solutions, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.governance_rules, sub_id, "list", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.information_protection_policies, sub_id, "list", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.jit_network_access_policies, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.locations, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.secure_score_controls, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.secure_scores, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.security_contacts, sub_id, "list", api_version="2023-12-01-preview", caller=caller_name),
+                self.auxillary_list_all(security_client.sub_assessments, sub_id, "list_all", scope, caller=caller_name),
+                self.auxillary_list_all(security_client.tasks, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.topology, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(security_client.workspace_settings, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.application_gateways, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.application_security_groups, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.azure_firewall_fqdn_tags, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.azure_firewalls, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.bastion_hosts, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.custom_ip_prefixes, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.ddos_protection_plans, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.dscp_configuration, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.express_route_circuits, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.express_route_ports, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.firewall_policies, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.ip_allocations, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.ip_groups, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.load_balancers, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.nat_gateways, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_interfaces, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_managers, sub_id, "list_by_subscription", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_profiles, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_security_groups, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_security_perimeters, sub_id, "list_by_subscription", api_version="2023-07-01-preview", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_virtual_appliances, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.network_watchers, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.p2_svpn_gateways, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.private_endpoints, sub_id, "list_by_subscription", caller=caller_name),
+                self.auxillary_list_all(network_manager.private_link_services, sub_id, "list_by_subscription", caller=caller_name),
+                self.auxillary_list_all(network_manager.public_ip_addresses, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.public_ip_prefixes, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.route_filters, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.route_tables, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.security_partner_providers, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.service_endpoint_policies, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.subscription_network_manager_connections, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.virtual_hubs, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.virtual_network_taps, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.virtual_networks, sub_id, "list_all", caller=caller_name),
+                self.auxillary_list_all(network_manager.virtual_routers, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.virtual_wans, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.vpn_gateways, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.vpn_server_configurations, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.vpn_sites, sub_id, "list", caller=caller_name),
+                self.auxillary_list_all(network_manager.web_application_firewall_policies, sub_id, "list_all", caller=caller_name)
             )
 
-            await asyncio.gather(
-                self._dump_container_config(),
-                self._dump_vm_config(),
-                self._dump_all_resources(),
-                self._dump_diagnostic_settings(),
-                self._dump_file_shares(),
-                self._dump_storage_accounts()
-            )
+            async with asyncio.TaskGroup() as tg:
+                tg.create_task(self._dump_container_config(), name=f"{caller_name}_dump_container_config")
+                tg.create_task(self._dump_vm_config(), name=f"{caller_name}_dump_vm_config")
+                tg.create_task(self._dump_all_resources(), name=f"{caller_name}_dump_all_resources")
+                tg.create_task(self._dump_diagnostic_settings(), name=f"{caller_name}_dump_diagnostic_settings")
+                tg.create_task(self._dump_file_shares(), name=f"{caller_name}_dump_file_shares")
+                tg.create_task(self._dump_storage_accounts(), name=f"{caller_name}_dump_storage_accounts")
