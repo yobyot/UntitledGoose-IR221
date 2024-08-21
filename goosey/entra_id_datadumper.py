@@ -354,8 +354,15 @@ class EntraIdDataDumper(DataDumper):
         elif self.us_government == "true":
             return "https://graph.microsoft.us/beta/"
 
-    async def helper_multiple_object(self, parent, child, output_dir, identifier='id'):
+    async def helper_multiple_object(self, parent, child, output_dir, identifier='id', caller=""):
         url_parent = self.get_url()
+
+        current_task = asyncio.current_task()
+        if "Task" in current_task.get_name():
+            task_name = f"{parent}_{child}"
+            if caller:
+                task_name = f"{caller}_{task_name}"
+            current_task.set_name(task_name)
 
         if 'token_type' not in self.app_auth or 'access_token' not in self.app_auth:
             self.logger.error(f"Missing token_type and access_token from auth. Did you auth correctly? (Skipping {parent})")
@@ -498,84 +505,85 @@ class EntraIdDataDumper(DataDumper):
         check_output_dir(sub_dir, self.logger)
 
         conf_call_object = [self.get_url(), self.app_auth, self.logger, sub_dir, self.get_session()]
+        caller_name = asyncio.current_task().get_name()
 
         await asyncio.gather(
-            helper_single_object('applications', conf_call_object, self.failurefile),
-            helper_single_object('directory/deleteditems/microsoft.graph.application', conf_call_object, self.failurefile),
-            helper_single_object('identityGovernance/appConsent/appConsentRequests', conf_call_object, self.failurefile),
-            helper_single_object('conditionalAccess/authenticationContextClassReferences', conf_call_object, self.failurefile),
-            helper_single_object('conditionalAccess/namedLocations',conf_call_object, self.failurefile),
-            helper_single_object('conditionalAccess/policies', conf_call_object, self.failurefile),
-            helper_single_object('devices', conf_call_object, self.failurefile),
-            helper_single_object('directoryRoles', conf_call_object, self.failurefile),
-            helper_single_object('roleManagement/directory/roleDefinitions', conf_call_object, self.failurefile),
-            helper_single_object('roleManagement/directory/roleAssignmentSchedules', conf_call_object, self.failurefile),
-            helper_single_object('roleManagement/directory/roleEligibilitySchedules', conf_call_object, self.failurefile),
-            helper_single_object('roleManagement/directory/roleEligibilityScheduleInstances', conf_call_object, self.failurefile),
-            helper_single_object('groups', conf_call_object, self.failurefile),
-            helper_single_object('directory/deleteditems/microsoft.graph.group', conf_call_object, self.failurefile),
-            helper_single_object('identity/identityProviders', conf_call_object, self.failurefile),
-            helper_single_object('identity/identityProviders/availableProviderTypes', conf_call_object, self.failurefile),
+            helper_single_object('applications', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directory/deleteditems/microsoft.graph.application', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identityGovernance/appConsent/appConsentRequests', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('conditionalAccess/authenticationContextClassReferences', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('conditionalAccess/namedLocations',conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('conditionalAccess/policies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('devices', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directoryRoles', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('roleManagement/directory/roleDefinitions', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('roleManagement/directory/roleAssignmentSchedules', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('roleManagement/directory/roleEligibilitySchedules', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('roleManagement/directory/roleEligibilityScheduleInstances', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('groups', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directory/deleteditems/microsoft.graph.group', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identity/identityProviders', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identity/identityProviders/availableProviderTypes', conf_call_object, self.failurefile, caller=caller_name),
             # not working anymore. Requires APIConnectors.ReadWrite.All
-            #helper_single_object('identity/apiConnectors', conf_call_object, self.failurefile),
-            helper_single_object('directorySettingTemplates', conf_call_object, self.failurefile),
-            helper_single_object('directory/federationConfigurations/graph.samlOrWsFedExternalDomainFederation', conf_call_object, self.failurefile),
-            helper_single_object('domains', conf_call_object, self.failurefile),
-            helper_single_object('organization', conf_call_object, self.failurefile),
-            helper_single_object('subscribedSkus', conf_call_object, self.failurefile),
-            helper_single_object('identity/continuousAccessEvaluationPolicy', conf_call_object, self.failurefile),
-            helper_single_object('identity/events/onSignupStart', conf_call_object, self.failurefile),
-            helper_single_object('policies/activityBasedTimeoutPolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/defaultAppManagementPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/tokenLifetimePolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/tokenIssuancePolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/authenticationFlowsPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/authenticationMethodsPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/authorizationPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/claimsMappingPolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/homeRealmDiscoveryPolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/permissionGrantPolicies', conf_call_object, self.failurefile),
-            helper_single_object('policies/identitySecurityDefaultsEnforcementPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/accessReviewPolicy', conf_call_object, self.failurefile),
-            helper_single_object('policies/adminConsentRequestPolicy', conf_call_object, self.failurefile),
-            helper_single_object('servicePrincipals', conf_call_object, self.failurefile),
-            helper_single_object("reports/getRelyingPartyDetailedSummary(period='D30')", conf_call_object, self.failurefile),
-            helper_single_object("reports/getAzureAdApplicationSignInSummary(period='D30')", conf_call_object, self.failurefile),
-            helper_single_object('reports/applicationSignInDetailedSummary', conf_call_object, self.failurefile),
-            helper_single_object("reports/getCredentialUsageSummary(period='D30')", conf_call_object, self.failurefile),
-            helper_single_object("reports/getCredentialUserRegistrationCount", conf_call_object, self.failurefile),
-            helper_single_object("reports/credentialUserRegistrationDetails", conf_call_object, self.failurefile),
-            helper_single_object("reports/userCredentialUsageDetails", conf_call_object, self.failurefile),
-            helper_single_object('users', conf_call_object, self.failurefile),
-            helper_single_object('contacts', conf_call_object, self.failurefile),
-            helper_single_object('oauth2PermissionGrants', conf_call_object, self.failurefile),
-            helper_single_object('directory/deletedItems/microsoft.graph.user', conf_call_object, self.failurefile),
-            helper_single_object('policies/featureRolloutPolicies', conf_call_object, self.failurefile),
-            self.helper_multiple_object(parent='users', child='appRoleAssignments', output_dir=sub_dir),
-            self.helper_multiple_object(parent='users', child='appRoleAssignedResources', output_dir=sub_dir),
-            self.helper_multiple_object(parent='applications', child='extensionProperties', output_dir=sub_dir),
-            self.helper_multiple_object(parent='applications', child='owners', output_dir=sub_dir),
-            self.helper_multiple_object(parent='applications', child='tokenIssuancePolicies', output_dir=sub_dir),
-            self.helper_multiple_object(parent='applications', child='tokenLifetimePolicies', output_dir=sub_dir),
-            self.helper_multiple_object(parent='applications', child='federatedIdentityCredentials', output_dir=sub_dir),
-            self.helper_multiple_object(parent='users', child='registeredDevices', output_dir=sub_dir),
-            self.helper_multiple_object(parent='directoryRoles', child='members', output_dir=sub_dir),
-            self.helper_multiple_object(parent='groups', child='appRoleAssignments', output_dir=sub_dir),
-            self.helper_multiple_object(parent='users', child='authentication/methods', output_dir=sub_dir),
-            self.helper_multiple_object(parent='domains', child='federationConfiguration', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='appRoleAssignments', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='appRoleAssignedTo', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='owners', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='createdObjects', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='ownedObjects', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='oauth2PermissionGrants', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='memberOf', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='transitiveMemberOf', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='homeRealmDiscoveryPolicies', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='synchronization/jobs', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='claimsMappingPolicies', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='tokenLifetimePolicies', output_dir=sub_dir),
-            self.helper_multiple_object(parent='servicePrincipals', child='delegatedPermissionClassifications', output_dir=sub_dir)
+            #helper_single_object('identity/apiConnectors', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directorySettingTemplates', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directory/federationConfigurations/graph.samlOrWsFedExternalDomainFederation', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('domains', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('organization', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('subscribedSkus', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identity/continuousAccessEvaluationPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identity/events/onSignupStart', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/activityBasedTimeoutPolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/defaultAppManagementPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/tokenLifetimePolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/tokenIssuancePolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/authenticationFlowsPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/authenticationMethodsPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/authorizationPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/claimsMappingPolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/homeRealmDiscoveryPolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/permissionGrantPolicies', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/identitySecurityDefaultsEnforcementPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/accessReviewPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/adminConsentRequestPolicy', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('servicePrincipals', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/getRelyingPartyDetailedSummary(period='D30')", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/getAzureAdApplicationSignInSummary(period='D30')", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('reports/applicationSignInDetailedSummary', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/getCredentialUsageSummary(period='D30')", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/getCredentialUserRegistrationCount", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/credentialUserRegistrationDetails", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object("reports/userCredentialUsageDetails", conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('users', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('contacts', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('oauth2PermissionGrants', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('directory/deletedItems/microsoft.graph.user', conf_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('policies/featureRolloutPolicies', conf_call_object, self.failurefile, caller=caller_name),
+            self.helper_multiple_object(parent='users', child='appRoleAssignments', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='users', child='appRoleAssignedResources', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='applications', child='extensionProperties', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='applications', child='owners', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='applications', child='tokenIssuancePolicies', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='applications', child='tokenLifetimePolicies', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='applications', child='federatedIdentityCredentials', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='users', child='registeredDevices', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='directoryRoles', child='members', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='groups', child='appRoleAssignments', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='users', child='authentication/methods', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='domains', child='federationConfiguration', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='appRoleAssignments', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='appRoleAssignedTo', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='owners', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='createdObjects', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='ownedObjects', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='oauth2PermissionGrants', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='memberOf', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='transitiveMemberOf', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='homeRealmDiscoveryPolicies', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='synchronization/jobs', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='claimsMappingPolicies', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='tokenLifetimePolicies', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='servicePrincipals', child='delegatedPermissionClassifications', output_dir=sub_dir, caller=caller_name)
         )
 
     async def dump_risk_detections(self) -> None:
@@ -584,11 +592,12 @@ class EntraIdDataDumper(DataDumper):
         """
         sub_dir = os.path.join(self.output_dir, 'entraid_riskdetections')
         check_output_dir(sub_dir, self.logger)
+        caller_name = asyncio.current_task().get_name()
 
         ri_call_object = [self.get_url(), self.app_auth, self.logger, sub_dir, self.get_session()]
         await asyncio.gather(
-            helper_single_object('identityProtection/riskDetections', ri_call_object, self.failurefile),
-            helper_single_object('identityProtection/servicePrincipalRiskDetections', ri_call_object, self.failurefile)
+            helper_single_object('identityProtection/riskDetections', ri_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identityProtection/servicePrincipalRiskDetections', ri_call_object, self.failurefile, caller=caller_name)
         )
 
     async def dump_risky_objects(self) -> None:
@@ -597,13 +606,14 @@ class EntraIdDataDumper(DataDumper):
         """
         sub_dir = os.path.join(self.output_dir, 'entraid_riskyobjects')
         check_output_dir(sub_dir, self.logger)
+        caller_name = asyncio.current_task().get_name()
 
         ri2_call_object = [self.get_url(), self.app_auth, self.logger, sub_dir, self.get_session()]
         await asyncio.gather(
-            helper_single_object('identityProtection/riskyUsers', ri2_call_object, self.failurefile),
-            helper_single_object('identityProtection/riskyServicePrincipals', ri2_call_object, self.failurefile),
-            self.helper_multiple_object(parent='riskyUsers', child='history', output_dir=sub_dir),
-            self.helper_multiple_object(parent='identityProtection/riskyServicePrincipals', child='history', output_dir=sub_dir)
+            helper_single_object('identityProtection/riskyUsers', ri2_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('identityProtection/riskyServicePrincipals', ri2_call_object, self.failurefile, caller=caller_name),
+            self.helper_multiple_object(parent='riskyUsers', child='history', output_dir=sub_dir, caller=caller_name),
+            self.helper_multiple_object(parent='identityProtection/riskyServicePrincipals', child='history', output_dir=sub_dir, caller=caller_name)
         )
 
     async def dump_security(self) -> None:
@@ -612,10 +622,11 @@ class EntraIdDataDumper(DataDumper):
         """
         sub_dir = os.path.join(self.output_dir, 'entraid_security')
         check_output_dir(sub_dir, self.logger)
+        caller_name = asyncio.current_task().get_name()
 
         sec_call_object = [self.get_url(), self.app_auth, self.logger, sub_dir, self.get_session()]
         await asyncio.gather(
-            helper_single_object('security/securityActions', sec_call_object, self.failurefile),
-            helper_single_object('security/alerts', sec_call_object, self.failurefile),
-            helper_single_object('security/secureScores', sec_call_object, self.failurefile)
+            helper_single_object('security/securityActions', sec_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('security/alerts', sec_call_object, self.failurefile, caller=caller_name),
+            helper_single_object('security/secureScores', sec_call_object, self.failurefile, caller=caller_name)
         )

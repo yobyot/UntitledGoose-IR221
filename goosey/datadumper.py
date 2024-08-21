@@ -15,7 +15,7 @@ class DataDumper(object):
     def get_session(self):
         return self.ahsession
 
-    def data_dump(self, calls) -> list:
+    def data_dump(self, calls, dumper_name) -> list:
         """
 
         :param calls: function calls to make mapped to params
@@ -31,7 +31,7 @@ class DataDumper(object):
                 self.logger.debug("Did not find %s in dumper" % (key))
                 continue
             self.logger.debug("Calling %s" % (func))
-            tasks.append(asyncio.create_task(self.func_wrapper(func), name=key))
+            tasks.append(asyncio.create_task(self.func_wrapper(func), name=f"{dumper_name}_{key}"))
         return tasks
 
     async def func_wrapper(self, func):

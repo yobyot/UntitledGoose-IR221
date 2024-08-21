@@ -156,7 +156,8 @@ class MDEDataDumper(DataDumper):
                 start = max(saved_end, start)
             # Use asyncio to use asyncronous coroutines to help ensure we get data before it rolls off
             self.logger.debug(f"Generating table dump task for table: {table}, start: {start}, end: {end}")
-            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedhunting/run", statefile=statefile, outfile=outfile),name=f"dump_{table}"))
+            caller_name = asyncio.current_task().get_name()
+            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedhunting/run", statefile=statefile, outfile=outfile),name=f"{caller_name}_{table}"))
 
         await asyncio.gather(*tasks)
 
@@ -208,7 +209,8 @@ class MDEDataDumper(DataDumper):
                 start = max(saved_end, start)
             # Use asyncio to use asyncronous coroutines to help ensure we get data before it rolls off
             self.logger.debug(f"Generating table dump task for table: {table}, machine: {machine_name}, start: {start}, end: {end}")
-            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedqueries/run", statefile=statefile, outfile=outfile), name=f"dump_{table}"))
+            caller_name = asyncio.current_task().get_name()
+            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedqueries/run", statefile=statefile, outfile=outfile), name=f"{caller_name}_{table}"))
         await asyncio.gather(*tasks)
 
     async def dump_advanced_identity_hunting_query(self) -> None:
@@ -245,7 +247,8 @@ class MDEDataDumper(DataDumper):
                 start = max(saved_end, start)
             # Use asyncio to use asyncronous coroutines to help ensure we get data before it rolls off
             self.logger.debug(f"Generating table dump task for table: {table}, start: {start}, end: {end}")
-            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedhunting/run", statefile=statefile, outfile=outfile),name=f"dump_{table}"))
+            caller_name = asyncio.current_task().get_name()
+            tasks.append(asyncio.create_task(self._dump_table(base_query, start, end, path="api/advancedhunting/run", statefile=statefile, outfile=outfile),name=f"{caller_name}_{table}"))
 
         await asyncio.gather(*tasks)
 

@@ -525,7 +525,7 @@ class M365DataDumper(DataDumper):
 
         return start, end
 
-    async def _new_ual_timeframe(self, start, end, retries=5, statefile=None, boundsfile=None, session_results=[], sessionId=None, isolated=False):
+    async def _new_ual_timeframe(self, start, end, retries=5, statefile=None, boundsfile=None, session_results=[], sessionId=None, isolated=False, caller=""):
         """
         Description:
             Query the ual API to get information about the number of logs
@@ -719,7 +719,7 @@ class M365DataDumper(DataDumper):
                             self.logger.debug("Waiting for ual dumpers to complete before starting more")
                             finished, ual_tasks_l = await asyncio.wait(self.ual_tasks, return_when=asyncio.FIRST_COMPLETED)
                             self.ual_tasks = list(ual_tasks_l)
-                        self.ual_tasks.append(asyncio.create_task(self._new_ual_timeframe(start, end, statefile=statefile, isolated=True, session_results=session_results, sessionId=sessionId, boundsfile=boundsfile), name=f"ual_dumper_{start.isoformat()}_{end.isoformat()}"))
+                        self.ual_tasks.append(asyncio.create_task(self._new_ual_timeframe(start, end, statefile=statefile, isolated=True, session_results=session_results, sessionId=sessionId, boundsfile=boundsfile), name=f"{caller}_dumper_{start.isoformat()}_{end.isoformat()}"))
                         new_task_created = True
                         response_count += sessionCount
                         break
@@ -844,7 +844,8 @@ class M365DataDumper(DataDumper):
             start = start.replace(microsecond=0)
             end = end.replace(microsecond=0)
             self.logger.info(f"Goosey collecting ual logs from : {start} -> {end}")
-            tasks.append(asyncio.create_task(self._new_ual_timeframe(start, end, statefile=statefile, boundsfile=boundsfile),name=f"ual_bounding_{start.isoformat()}_{end.isoformat()}"))
+            caller_name = asyncio.current_task().get_name()
+            tasks.append(asyncio.create_task(self._new_ual_timeframe(start, end, statefile=statefile, boundsfile=boundsfile, caller=caller_name),name=f"{caller_name}_bounding_{start.isoformat()}_{end.isoformat()}"))
 
         self.total_ual_logs_saved = 0
         self.ual_seconds = time.perf_counter()
