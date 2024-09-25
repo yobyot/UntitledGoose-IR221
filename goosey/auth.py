@@ -70,7 +70,7 @@ class Authentication():
         """
         if self.us_government == 'false':
             if self.mde_gcc == 'false' and self.mde_gcc_high == 'false':
-                return ['https://graph.microsoft.com/.default', 'https://outlook.office365.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://management.azure.com/.default', 'https://api.security.microsoft.com/.default']
+                return ['https://graph.microsoft.com/.default', 'https://outlook.office365.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://management.azure.com/.default', 'https://api.security.microsoft.com/.default', 'https://api.loganalytics.io/.default']
             elif self.mde_gcc == 'true':
                 return ['https://graph.microsoft.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://api-gcc.securitycenter.microsoft.us', 'https://api-gcc.security.microsoft.us']
             elif self.mde_gcc_high == 'true':
@@ -100,51 +100,6 @@ class Authentication():
             expiration_time = time.time() + self.tokendata['expires_in']
             self.tokendata['expires_on'] = expiration_time
         return self.tokendata
-
-    @staticmethod
-    def get_sub_argparse(auth_parser):
-        """
-        Get an argparse subparser for authentication
-        """
-        auth_parser.add_argument('-a',
-                                 '--authfile',
-                                 action='store',
-                                 help='File to store the authentication tokens and cookies (default: .ugt_auth)',
-                                 default='.ugt_auth')
-        auth_parser.add_argument('--d4iot-authfile',
-                                 action='store',
-                                 help='File to store the authentication cookies for D4IoT (default: .d4iot_auth)',
-                                 default='.d4iot_auth')
-        auth_parser.add_argument('-c',
-                                 '--config',
-                                 action='store',
-                                 help='Path to config file (default: .conf)',
-                                 default='.conf')
-        auth_parser.add_argument('-ac',
-                                 '--auth',
-                                 action='store',
-                                 help='File to store the credentials used for authentication (default: .auth)',
-                                 default='.auth')
-        auth_parser.add_argument('--d4iot-auth',
-                                 action='store',
-                                 help='File to store the D4IoT credentials used for authentication (default: .auth_d4iot)',
-                                 default='.auth_d4iot')
-        auth_parser.add_argument('--d4iot-config',
-                                 action='store',
-                                 help='Path to D4IoT config file (default: .d4iot_conf)',
-                                 default='.d4iot_conf')
-        auth_parser.add_argument('--debug',
-                                 action='store_true',
-                                 help='Enable debug logging')
-        auth_parser.add_argument('--d4iot',
-                                 action='store_true',
-                                 help='Run the authentication portion for d4iot',
-                                 default=False)
-        auth_parser.add_argument('--insecure',
-                                 action='store_true',
-                                 help='Disable secure authentication handling (file encryption)')
-        return auth_parser
-
 
     def parse_config(self, configfile):
         config = configparser.ConfigParser()
@@ -349,19 +304,6 @@ def check_app_auth_token(auth_data, logger):
         sys.exit(1)
     return False
 
-def main():
-    parser = argparse.ArgumentParser(add_help=True, description='Untitled Goose Tool Authentication', formatter_class=argparse.RawDescriptionHelpFormatter)
-    auth = Authentication(debug=True)
-    auth.get_sub_argparse(parser)
-    args = parser.parse_args()
-    auth.parse_args(args)
-    if args.revoke:
-        auth.revoke_tokens(args)
-    if args.d4iot:
-        auth.d4iot_auth()
-    else:
-        auth.ugt_auth()
-
 def auth(authfile=".ugt_auth",
          d4iot_authfile=".d4iot_auth",
          config=".conf",
@@ -393,7 +335,6 @@ def auth(authfile=".ugt_auth",
         auth.d4iot_auth()
     else:
         auth.ugt_auth()
-
 
 if __name__ == '__main__':
     main()

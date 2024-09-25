@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "untitledgoosetool",
- "documentNamespace": "https://anchore.com/syft/dir/untitledgoosetool-af5652a7-7f6e-4387-a490-bb82dc6d8c91",
+ "documentNamespace": "https://anchore.com/syft/dir/untitledgoosetool-ebe8892f-9468-4458-b46e-ab3259f94197",
  "creationInfo": {
   "licenseListVersion": "3.21",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-0.90.0"
   ],
-  "created": "2024-08-21T18:35:55Z"
+  "created": "2024-09-23T18:15:36Z"
  },
  "packages": [
   {
@@ -252,8 +252,8 @@
   },
   {
    "name": "aiohttp",
-   "SPDXID": "SPDXRef-Package-python-aiohttp-7bc574cba76256fb",
-   "versionInfo": "3.10.4",
+   "SPDXID": "SPDXRef-Package-python-aiohttp-68ce8e4270bf2076",
+   "versionInfo": "3.10.5",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -265,67 +265,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:aiohttp:3.10.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:aiohttp:3.10.5:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/aiohttp@3.10.4"
+     "referenceLocator": "pkg:pypi/aiohttp@3.10.5"
     }
    ]
   },
@@ -847,8 +847,8 @@
   },
   {
    "name": "azure-core",
-   "SPDXID": "SPDXRef-Package-python-azure-core-2e78712a41f6d180",
-   "versionInfo": "1.30.2",
+   "SPDXID": "SPDXRef-Package-python-azure-core-a279403b6fcd431f",
+   "versionInfo": "1.31.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -860,174 +860,174 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-core:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-core:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-core:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-core:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_core:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_core:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_core:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_core:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-core:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-core:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-core:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-core:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_core:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_core:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_core:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_core:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure-core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure_core:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/azure-core@1.30.2"
+     "referenceLocator": "pkg:pypi/azure-core@1.31.0"
     }
    ]
   },
   {
    "name": "azure-identity",
-   "SPDXID": "SPDXRef-Package-python-azure-identity-946bc275bc4af2bf",
-   "versionInfo": "1.17.1",
+   "SPDXID": "SPDXRef-Package-python-azure-identity-40da46bae3dde07a",
+   "versionInfo": "1.18.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -1039,174 +1039,174 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/azure-identity@1.17.1"
+     "referenceLocator": "pkg:pypi/azure-identity@1.18.0"
     }
    ]
   },
   {
    "name": "azure-mgmt-compute",
-   "SPDXID": "SPDXRef-Package-python-azure-mgmt-compute-dd3e9e274d7f03af",
-   "versionInfo": "32.0.0",
+   "SPDXID": "SPDXRef-Package-python-azure-mgmt-compute-18197512ff936244",
+   "versionInfo": "33.0.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -1218,247 +1218,247 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/azure-mgmt-compute@32.0.0"
+     "referenceLocator": "pkg:pypi/azure-mgmt-compute@33.0.0"
     }
    ]
   },
@@ -3018,8 +3018,8 @@
   },
   {
    "name": "azure-mgmt-web",
-   "SPDXID": "SPDXRef-Package-python-azure-mgmt-web-b27877859c3ccf9b",
-   "versionInfo": "7.3.0",
+   "SPDXID": "SPDXRef-Package-python-azure-mgmt-web-b180f5958213a504",
+   "versionInfo": "7.3.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -3031,254 +3031,254 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt-web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt_web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt-web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt_web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/azure-mgmt-web@7.3.0"
+     "referenceLocator": "pkg:pypi/azure-mgmt-web@7.3.1"
     }
    ]
   },
   {
    "name": "azure-storage-blob",
-   "SPDXID": "SPDXRef-Package-python-azure-storage-blob-6149c68ee862704d",
-   "versionInfo": "12.22.0",
+   "SPDXID": "SPDXRef-Package-python-azure-storage-blob-701d7477e360de56",
+   "versionInfo": "12.23.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -3290,254 +3290,254 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage-blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage-blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage-blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage-blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage_blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage_blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage_blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage_blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage-blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage_blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure-storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure-storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure_storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure_storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage-blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage-blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage-blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage-blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage_blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage_blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage_blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage_blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure-storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure-storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure_storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure_storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/azure-storage-blob@12.22.0"
+     "referenceLocator": "pkg:pypi/azure-storage-blob@12.23.0"
     }
    ]
   },
   {
    "name": "certifi",
-   "SPDXID": "SPDXRef-Package-python-certifi-b8b3277b0ead0f2f",
-   "versionInfo": "2024.7.4",
+   "SPDXID": "SPDXRef-Package-python-certifi-fd648d9bb1b5b7a0",
+   "versionInfo": "2024.8.30",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -3549,74 +3549,74 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:certifi:2024.7.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:certifi:2024.8.30:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/certifi@2024.7.4"
+     "referenceLocator": "pkg:pypi/certifi@2024.8.30"
     }
    ]
   },
   {
    "name": "cffi",
-   "SPDXID": "SPDXRef-Package-python-cffi-ddafbdb6b8f26cd6",
-   "versionInfo": "1.17.0",
+   "SPDXID": "SPDXRef-Package-python-cffi-f9bea74e149fe0b6",
+   "versionInfo": "1.17.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -3628,67 +3628,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-cffi:python-cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-cffi:python-cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_cffi:python-cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_cffi:python-cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:cffi:python-cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:cffi:python-cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-cffi:cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_cffi:cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:cffi:cffi:1.17.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/cffi@1.17.0"
+     "referenceLocator": "pkg:pypi/cffi@1.17.1"
     }
    ]
   },
@@ -3952,8 +3952,8 @@
   },
   {
    "name": "cryptography",
-   "SPDXID": "SPDXRef-Package-python-cryptography-33694983a03200a7",
-   "versionInfo": "43.0.0",
+   "SPDXID": "SPDXRef-Package-python-cryptography-6744b73500c91d22",
+   "versionInfo": "43.0.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -3965,12 +3965,12 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-cryptography_project:python-cryptography:43.0.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-cryptography_project:python-cryptography:43.0.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/cryptography@43.0.0"
+     "referenceLocator": "pkg:pypi/cryptography@43.0.1"
     }
    ]
   },
@@ -4729,8 +4729,8 @@
   },
   {
    "name": "idna",
-   "SPDXID": "SPDXRef-Package-python-idna-6600c771e3e21b62",
-   "versionInfo": "3.7",
+   "SPDXID": "SPDXRef-Package-python-idna-2678420953dedac4",
+   "versionInfo": "3.10",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -4742,74 +4742,74 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-idna:python-idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-idna:python-idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-idna:python_idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-idna:python_idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_idna:python-idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_idna:python-idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_idna:python_idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_idna:python_idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:idna:python-idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:idna:python-idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:idna:python_idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:idna:python_idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-idna:idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-idna:idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_idna:idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_idna:idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:idna:idna:3.7:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:idna:idna:3.10:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/idna@3.7"
+     "referenceLocator": "pkg:pypi/idna@3.10"
     }
    ]
   },
   {
    "name": "importlib-metadata",
-   "SPDXID": "SPDXRef-Package-python-importlib-metadata-dc6b9a2c7b5cbca9",
-   "versionInfo": "8.2.0",
+   "SPDXID": "SPDXRef-Package-python-importlib-metadata-097ee7c1b103f8ed",
+   "versionInfo": "8.5.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -4821,167 +4821,167 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib-metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib-metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib-metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib-metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib_metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib_metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib_metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib_metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib-metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib_metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib-metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib-metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib-metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib-metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib_metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib_metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib_metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib_metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/importlib-metadata@8.2.0"
+     "referenceLocator": "pkg:pypi/importlib-metadata@8.5.0"
     }
    ]
   },
@@ -5224,8 +5224,8 @@
   },
   {
    "name": "keyring",
-   "SPDXID": "SPDXRef-Package-python-keyring-593aef83a66341c1",
-   "versionInfo": "25.3.0",
+   "SPDXID": "SPDXRef-Package-python-keyring-f113c808cb623c3e",
+   "versionInfo": "25.4.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -5237,67 +5237,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-keyring:python-keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-keyring:python-keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_keyring:python-keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_keyring:python-keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:keyring:python-keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:keyring:python-keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-keyring:keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_keyring:keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:keyring:keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:keyring:25.3.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:keyring:25.4.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/keyring@25.3.0"
+     "referenceLocator": "pkg:pypi/keyring@25.4.1"
     }
    ]
   },
@@ -5461,8 +5461,8 @@
   },
   {
    "name": "more-itertools",
-   "SPDXID": "SPDXRef-Package-python-more-itertools-e924fc61eb8ff701",
-   "versionInfo": "10.4.0",
+   "SPDXID": "SPDXRef-Package-python-more-itertools-ba44a2b9d6805222",
+   "versionInfo": "10.5.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -5474,174 +5474,174 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more-itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more-itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more-itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more-itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more_itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more_itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more_itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more_itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more-itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more-itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more-itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more-itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more_itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more_itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more_itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more_itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more-itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more-itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more-itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more-itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more_itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more_itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more_itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more_itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more-itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more-itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more-itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more-itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more_itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more_itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more_itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more_itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-more:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_more:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more:more-itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:more:more_itertools:10.5.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/more-itertools@10.4.0"
+     "referenceLocator": "pkg:pypi/more-itertools@10.5.0"
     }
    ]
   },
   {
    "name": "msal",
-   "SPDXID": "SPDXRef-Package-python-msal-320c734c2cd641a9",
-   "versionInfo": "1.30.0",
+   "SPDXID": "SPDXRef-Package-python-msal-cfc9f27722b894ea",
+   "versionInfo": "1.31.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -5653,67 +5653,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-msal:python-msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-msal:python-msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-msal:python_msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_msal:python-msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_msal:python-msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_msal:python_msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:msal:python-msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:msal:python-msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:msal:python_msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-msal:msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-msal:msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_msal:msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_msal:msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:msal:msal:1.30.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:msal:msal:1.31.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/msal@1.30.0"
+     "referenceLocator": "pkg:pypi/msal@1.31.0"
     }
    ]
   },
@@ -6056,8 +6056,8 @@
   },
   {
    "name": "multidict",
-   "SPDXID": "SPDXRef-Package-python-multidict-e9ab5d7dc85b85d2",
-   "versionInfo": "6.0.5",
+   "SPDXID": "SPDXRef-Package-python-multidict-8efbcee082935ebb",
+   "versionInfo": "6.1.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -6069,67 +6069,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-multidict:python-multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-multidict:python-multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_multidict:python-multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_multidict:python-multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:multidict:python-multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:multidict:python-multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-multidict:multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_multidict:multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:multidict:multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:multidict:6.0.5:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:multidict:6.1.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/multidict@6.0.5"
+     "referenceLocator": "pkg:pypi/multidict@6.1.0"
     }
    ]
   },
@@ -6372,8 +6372,8 @@
   },
   {
    "name": "pathvalidate",
-   "SPDXID": "SPDXRef-Package-python-pathvalidate-43193211b24e82e8",
-   "versionInfo": "3.2.0",
+   "SPDXID": "SPDXRef-Package-python-pathvalidate-24eb8af432aec778",
+   "versionInfo": "3.2.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -6385,67 +6385,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:pathvalidate:3.2.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/pathvalidate@3.2.0"
+     "referenceLocator": "pkg:pypi/pathvalidate@3.2.1"
     }
    ]
   },
@@ -6609,8 +6609,8 @@
   },
   {
    "name": "pyasn1",
-   "SPDXID": "SPDXRef-Package-python-pyasn1-44b885818e87a2ef",
-   "versionInfo": "0.6.0",
+   "SPDXID": "SPDXRef-Package-python-pyasn1-664d276e206e6e0b",
+   "versionInfo": "0.6.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -6622,67 +6622,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:pyasn1:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:pyasn1:0.6.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/pyasn1@0.6.0"
+     "referenceLocator": "pkg:pypi/pyasn1@0.6.1"
     }
    ]
   },
@@ -6767,8 +6767,8 @@
   },
   {
    "name": "pyparsing",
-   "SPDXID": "SPDXRef-Package-python-pyparsing-0f5919f301109bab",
-   "versionInfo": "3.1.2",
+   "SPDXID": "SPDXRef-Package-python-pyparsing-6c3b61c772a8d2fd",
+   "versionInfo": "3.1.4",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -6780,67 +6780,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:pyparsing:3.1.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:pyparsing:3.1.4:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/pyparsing@3.1.2"
+     "referenceLocator": "pkg:pypi/pyparsing@3.1.4"
     }
    ]
   },
@@ -6895,8 +6895,8 @@
   },
   {
    "name": "pytz",
-   "SPDXID": "SPDXRef-Package-python-pytz-edaef6570e946bce",
-   "versionInfo": "2024.1",
+   "SPDXID": "SPDXRef-Package-python-pytz-18ad7108bd85e0e5",
+   "versionInfo": "2024.2",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -6908,67 +6908,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pytz:python-pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pytz:python-pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pytz:python-pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pytz:python-pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-pytz:pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-pytz:pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_pytz:pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_pytz:pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pytz:python-pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pytz:python-pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:pytz:pytz:2024.1:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:pytz:pytz:2024.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/pytz@2024.1"
+     "referenceLocator": "pkg:pypi/pytz@2024.2"
     }
    ]
   },
@@ -7792,8 +7792,8 @@
   },
   {
    "name": "urllib3",
-   "SPDXID": "SPDXRef-Package-python-urllib3-571dd3dddb95174a",
-   "versionInfo": "2.2.2",
+   "SPDXID": "SPDXRef-Package-python-urllib3-200cd377500efae3",
+   "versionInfo": "2.2.3",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -7805,19 +7805,19 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:urllib3:2.2.2:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:urllib3:2.2.3:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/urllib3@2.2.2"
+     "referenceLocator": "pkg:pypi/urllib3@2.2.3"
     }
    ]
   },
   {
    "name": "wadllib",
-   "SPDXID": "SPDXRef-Package-python-wadllib-2ec4536957c99a19",
-   "versionInfo": "1.3.6",
+   "SPDXID": "SPDXRef-Package-python-wadllib-ad27d7cb90eb9b21",
+   "versionInfo": "1.3.9",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -7829,67 +7829,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:wadllib:1.3.6:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:wadllib:1.3.9:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/wadllib@1.3.6"
+     "referenceLocator": "pkg:pypi/wadllib@1.3.9"
     }
    ]
   },
@@ -7974,8 +7974,8 @@
   },
   {
    "name": "yarl",
-   "SPDXID": "SPDXRef-Package-python-yarl-cba52cc792096e58",
-   "versionInfo": "1.9.4",
+   "SPDXID": "SPDXRef-Package-python-yarl-e69bea513abe4c24",
+   "versionInfo": "1.11.1",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -7987,74 +7987,74 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-yarl:python-yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-yarl:python-yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_yarl:python-yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_yarl:python-yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-yarl:yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_yarl:yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:yarl:python-yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:yarl:python-yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:yarl:yarl:1.11.1:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/yarl@1.9.4"
+     "referenceLocator": "pkg:pypi/yarl@1.11.1"
     }
    ]
   },
   {
    "name": "zipp",
-   "SPDXID": "SPDXRef-Package-python-zipp-46f41ac016947d68",
-   "versionInfo": "3.20.0",
+   "SPDXID": "SPDXRef-Package-python-zipp-24caf9ae9b8c4214",
+   "versionInfo": "3.20.2",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -8066,67 +8066,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-zipp:python-zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-zipp:python-zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_zipp:python-zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_zipp:python-zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-zipp:zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_zipp:zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:zipp:python-zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:zipp:python-zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:zipp:zipp:3.20.2:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/zipp@3.20.0"
+     "referenceLocator": "pkg:pypi/zipp@3.20.2"
     }
    ]
   },
@@ -8240,13 +8240,25 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-pyparsing-0f5919f301109bab",
+   "spdxElementId": "SPDXRef-Package-python-importlib-metadata-097ee7c1b103f8ed",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
    "spdxElementId": "SPDXRef-Package-python-PySocks-11e76a743419c746",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-azure-mgmt-compute-18197512ff936244",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-pytz-18ad7108bd85e0e5",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8264,31 +8276,31 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-python-urllib3-200cd377500efae3",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-zipp-24caf9ae9b8c4214",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-pathvalidate-24eb8af432aec778",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-azure-mgmt-resource-25d21558b649f75b",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-azure-core-2e78712a41f6d180",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-wadllib-2ec4536957c99a19",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-msal-320c734c2cd641a9",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-cryptography-33694983a03200a7",
+   "spdxElementId": "SPDXRef-Package-python-idna-2678420953dedac4",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8306,7 +8318,7 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-pathvalidate-43193211b24e82e8",
+   "spdxElementId": "SPDXRef-Package-python-azure-identity-40da46bae3dde07a",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8319,18 +8331,6 @@
   },
   {
    "spdxElementId": "SPDXRef-Package-python-launchpadlib-445fa778dc38f9c0",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-pyasn1-44b885818e87a2ef",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-zipp-46f41ac016947d68",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8354,18 +8354,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-urllib3-571dd3dddb95174a",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-keyring-593aef83a66341c1",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-python-portalocker-59ecf41ef8bf86ae",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
@@ -8378,19 +8366,37 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-azure-storage-blob-6149c68ee862704d",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-idna-6600c771e3e21b62",
+   "spdxElementId": "SPDXRef-Package-python-pyasn1-664d276e206e6e0b",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
    "spdxElementId": "SPDXRef-Package-python-lxml-666d4e1dc694fc82",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-cryptography-6744b73500c91d22",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-aiohttp-68ce8e4270bf2076",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-pyparsing-6c3b61c772a8d2fd",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-azure-storage-blob-701d7477e360de56",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8415,12 +8421,6 @@
   },
   {
    "spdxElementId": "SPDXRef-Package-python-outcome-76b4b141192b9ae5",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-aiohttp-7bc574cba76256fb",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8474,6 +8474,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-python-multidict-8efbcee082935ebb",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-oauthlib-908717a6e08f60e5",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
@@ -8481,12 +8487,6 @@
   },
   {
    "spdxElementId": "SPDXRef-Package-python-msal-extensions-92e5ff885ead04ec",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-azure-identity-946bc275bc4af2bf",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8516,6 +8516,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-python-azure-core-a279403b6fcd431f",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-fire-a3d813347f24f3b3",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
@@ -8528,7 +8534,13 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-azure-mgmt-web-b27877859c3ccf9b",
+   "spdxElementId": "SPDXRef-Package-python-wadllib-ad27d7cb90eb9b21",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-azure-mgmt-web-b180f5958213a504",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8540,7 +8552,7 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-certifi-b8b3277b0ead0f2f",
+   "spdxElementId": "SPDXRef-Package-python-more-itertools-ba44a2b9d6805222",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8576,12 +8588,6 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-yarl-cba52cc792096e58",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
    "spdxElementId": "SPDXRef-Package-python-typing-extensions-ce8a437df13e5317",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
@@ -8594,19 +8600,7 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-importlib-metadata-dc6b9a2c7b5cbca9",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-azure-mgmt-compute-dd3e9e274d7f03af",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-cffi-ddafbdb6b8f26cd6",
+   "spdxElementId": "SPDXRef-Package-python-msal-cfc9f27722b894ea",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8624,25 +8618,31 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-more-itertools-e924fc61eb8ff701",
+   "spdxElementId": "SPDXRef-Package-python-yarl-e69bea513abe4c24",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
-   "spdxElementId": "SPDXRef-Package-python-multidict-e9ab5d7dc85b85d2",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-pytz-edaef6570e946bce",
+   "spdxElementId": "SPDXRef-Package-python-keyring-f113c808cb623c3e",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
    "spdxElementId": "SPDXRef-Package-python-azure-mgmt-core-f20eb82a6f8e4469",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-cffi-f9bea74e149fe0b6",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
+   "spdxElementId": "SPDXRef-Package-python-certifi-fd648d9bb1b5b7a0",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8664,7 +8664,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-aiohttp-7bc574cba76256fb",
+   "relatedSpdxElement": "SPDXRef-Package-python-aiohttp-68ce8e4270bf2076",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8689,17 +8689,17 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-azure-core-2e78712a41f6d180",
+   "relatedSpdxElement": "SPDXRef-Package-python-azure-core-a279403b6fcd431f",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-azure-identity-946bc275bc4af2bf",
+   "relatedSpdxElement": "SPDXRef-Package-python-azure-identity-40da46bae3dde07a",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-azure-mgmt-compute-dd3e9e274d7f03af",
+   "relatedSpdxElement": "SPDXRef-Package-python-azure-mgmt-compute-18197512ff936244",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8734,22 +8734,22 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-azure-mgmt-web-b27877859c3ccf9b",
+   "relatedSpdxElement": "SPDXRef-Package-python-azure-mgmt-web-b180f5958213a504",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-azure-storage-blob-6149c68ee862704d",
+   "relatedSpdxElement": "SPDXRef-Package-python-azure-storage-blob-701d7477e360de56",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-certifi-b8b3277b0ead0f2f",
+   "relatedSpdxElement": "SPDXRef-Package-python-certifi-fd648d9bb1b5b7a0",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-cffi-ddafbdb6b8f26cd6",
+   "relatedSpdxElement": "SPDXRef-Package-python-cffi-f9bea74e149fe0b6",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8764,7 +8764,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-cryptography-33694983a03200a7",
+   "relatedSpdxElement": "SPDXRef-Package-python-cryptography-6744b73500c91d22",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8804,12 +8804,12 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-idna-6600c771e3e21b62",
+   "relatedSpdxElement": "SPDXRef-Package-python-idna-2678420953dedac4",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-importlib-metadata-dc6b9a2c7b5cbca9",
+   "relatedSpdxElement": "SPDXRef-Package-python-importlib-metadata-097ee7c1b103f8ed",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8829,7 +8829,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-keyring-593aef83a66341c1",
+   "relatedSpdxElement": "SPDXRef-Package-python-keyring-f113c808cb623c3e",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8844,12 +8844,12 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-more-itertools-e924fc61eb8ff701",
+   "relatedSpdxElement": "SPDXRef-Package-python-more-itertools-ba44a2b9d6805222",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-msal-320c734c2cd641a9",
+   "relatedSpdxElement": "SPDXRef-Package-python-msal-cfc9f27722b894ea",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8869,7 +8869,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-multidict-e9ab5d7dc85b85d2",
+   "relatedSpdxElement": "SPDXRef-Package-python-multidict-8efbcee082935ebb",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8889,7 +8889,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-pathvalidate-43193211b24e82e8",
+   "relatedSpdxElement": "SPDXRef-Package-python-pathvalidate-24eb8af432aec778",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8904,7 +8904,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-pyasn1-44b885818e87a2ef",
+   "relatedSpdxElement": "SPDXRef-Package-python-pyasn1-664d276e206e6e0b",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8914,7 +8914,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-pyparsing-0f5919f301109bab",
+   "relatedSpdxElement": "SPDXRef-Package-python-pyparsing-6c3b61c772a8d2fd",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8924,7 +8924,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-pytz-edaef6570e946bce",
+   "relatedSpdxElement": "SPDXRef-Package-python-pytz-18ad7108bd85e0e5",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8964,12 +8964,12 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-urllib3-571dd3dddb95174a",
+   "relatedSpdxElement": "SPDXRef-Package-python-urllib3-200cd377500efae3",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-wadllib-2ec4536957c99a19",
+   "relatedSpdxElement": "SPDXRef-Package-python-wadllib-ad27d7cb90eb9b21",
    "relationshipType": "CONTAINS"
   },
   {
@@ -8979,12 +8979,12 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-yarl-cba52cc792096e58",
+   "relatedSpdxElement": "SPDXRef-Package-python-yarl-e69bea513abe4c24",
    "relationshipType": "CONTAINS"
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-zipp-46f41ac016947d68",
+   "relatedSpdxElement": "SPDXRef-Package-python-zipp-24caf9ae9b8c4214",
    "relationshipType": "CONTAINS"
   },
   {

@@ -14,6 +14,7 @@ import sys
 import getpass
 import pyAesCrypt
 import io
+import pytz
 
 from colored import stylize, attr, fg
 from datetime import datetime, timedelta, date
@@ -25,6 +26,8 @@ if sys.platform == 'win32':
     import msvcrt
 else:
     import fcntl
+
+utc = pytz.UTC
 
 # Custom logging from https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 class CustomFormatter(logging.Formatter):
@@ -286,7 +289,160 @@ async def get_nextlink(url, outfile, session, logger, auth):
                 except AttributeError as a:
                     logger.error('Error on nextLink retrieval {}: {}'.format(skiptoken, str(e)))
 
+async def run_kql_query(query, start, end, bounds, url, app_auth, logger, session, threshold=10000, summarize=False):
+    """
+    Run an advanced query or hunt and return the result
+    """
+    # errors from the query that will cause the dumper to sleep
+    sleep_errors = ["Server disconnected", "Cannot connect", "WinError 10054"]
+    # errors from the query that will cause the dumper to cut the tim in half
+    slice_errors = ['exceeded the allowed limits', 'exceeded the allowed result size']
+    # Errors in the authentication token
+    auth_errors = ['TokenExpired']
 
+
+    header = {
+        'Authorization': '%s %s' % (app_auth['token_type'], app_auth['access_token']),
+        'Content-Type': 'application/json'
+    }
+    # Apply time filters
+    full_query = query
+    if start and not end:
+        full_query += f"|where TimeGenerated > datetime({start})"
+    elif end and not start:
+        full_query += f"|where TimeGenerated < datetime({end})"
+    elif end and start:
+        full_query += f"|where TimeGenerated between(datetime({start})..datetime({end}))"
+
+    if summarize:
+        full_query += f"| summarize Count=count(), FirstEvent=min(TimeGenerated), LastEvent=max(TimeGenerated)"
+    if query.startswith("search \"*\""):
+        full_query += " by $table"
+
+    logger.debug(full_query)
+    payload = {"query": full_query}
+    data=json.dumps(payload)
+    result = None
+    err = None
+    try:
+        async with session.request("POST", url=url, headers=header, data=data) as r:
+            result = await r.json()
+            if r.status == 401:
+                logger.error("Detected 401 unauthorized, exiting.")
+                sys.exit(1)
+            elif r.status == 429:
+                error = result['error']
+                message = error['message']
+                logger.debug(message)
+                await asyncio.sleep(30)
+                err = message
+                result = None
+            else:
+                if "error" in result:
+                    err = result["error"]["message"]
+                if "tables" in result:
+                    result = result["tables"]
+                else:
+                    logger.debug(result)
+                    result = None
+
+    except Exception as e:
+        logger.error('Error on retrieval: {}'.format(str(e)))
+        err = str(e)
+
+    results = map_results(result)
+
+    # Insert a new record into the bounds.
+    count = None
+    done_status = False
+    if summarize and results:
+        count = results[0]["Count"]
+    elif results:
+        count = len(results)
+    if count != None:
+        done_status = count < threshold
+    if bounds:
+        bounds = insert_bounds_record({"count": count,
+                  "start": start,
+                  "end": end,
+                  "done_status": done_status}, bounds)
+    if err:
+        logger.debug(err)
+    if err is TimeoutError or \
+       err and any(e in err for e in slice_errors) or \
+       (count and count >= threshold):
+       new_end_ts = start.timestamp() + ((end.timestamp() - start.timestamp())/2)
+       end = datetime.fromtimestamp(new_end_ts, utc)
+    elif err and any(e in err for e in sleep_errors):
+        await asyncio.sleep(int(60))
+    elif err and any(e in err for e in auth_errors):
+        sys.exit(1)
+
+    return results, err, end, bounds
+
+def map_results(kql_results):
+    """
+    Description:
+        Convert the result resturned from a kql query to a dictionary
+
+    Arguments:
+        kql_results: list of column names and rows that need to be mapped
+
+    Returns:
+        The mapped dictionary
+    """
+    if not kql_results:
+        return None
+    results = []
+    for row in kql_results[0]["rows"]:
+        new_entry = {}
+        for idx, column in enumerate(kql_results[0]["columns"]):
+            new_entry[column["name"]] = row[idx]
+        results.append(new_entry)
+    return results
+
+def insert_bounds_record(record, bounds):
+    """
+    Description:
+        Add a record to the sorted  bounds_state.
+
+    Arguments:
+        record: Tuple of (start, end, count, done_status)
+        bounds: Time Bounds Dictionary
+
+    Returns:
+        bounds. The updated time bounds dictionary
+    """
+    # Perform insert
+    #self.logger.debug(f"Inserting Record {record}")
+
+    if len(bounds) == 0:
+        bounds.append(record)
+        return bounds
+    done_idx = 0
+    for idx, cur_record in enumerate(bounds):
+        # Only situation for an insert here should be where a record already exists with that start
+        # time and we just shrink the bounds
+        if record["start"] == cur_record["start"] and record["end"] <= cur_record["end"]:
+            cur_record["start"] = record["end"]
+            # if the count is less than 0 then it is not accurate
+            if cur_record["count"] != None and cur_record["count"] >= 0 \
+               and record["count"] != None and record["count"] > 0:
+                cur_record["count"] = max(0,cur_record["count"] - record["count"])
+
+            new_records = [record.copy(), cur_record.copy()]
+            if (cur_record["count"] != None and cur_record["count"] == 0) or cur_record["start"] == cur_record["end"]:
+                record["end"] = cur_record["end"]
+                new_records = [record.copy()]
+            bounds = bounds[done_idx:idx] + new_records + bounds[idx+1:]
+            #self.logger.debug(f"Record inserted at index {idx}")
+            break
+    idx = 0
+    while idx < len(bounds):
+        if bounds[idx]["done_status"] == False:
+            break
+        idx += 1
+    return bounds[idx:]
 
 async def helper_single_object(object, params, failurefile=None, retries=5, caller="") -> None:
         url, auth, logger, output_dir, session = params[0], params[1], params[2], params[3], params[4]
@@ -302,12 +458,13 @@ async def helper_single_object(object, params, failurefile=None, retries=5, call
             logger.error(f"Missing token_type and access_token from auth. Did you auth correctly? (Skipping {object})")
             return
         url += object
+        if '?' in object:
+            object = object.split('?')[0]
         if '/' in object:
             temp = object.split('/')
-            name = '_'.join(temp)
-            object = temp[-1]
-        elif '/' not in object:
-            name = object
+            object = '_'.join(temp)
+        name = object
+        logger.debug(name)
 
         try:
             header = {'Authorization': '%s %s' % (auth['token_type'], auth['access_token'])}
@@ -360,6 +517,7 @@ async def helper_single_object(object, params, failurefile=None, retries=5, call
                     elif e.status == 401:
                         logger.error('Unauthorized message received. Exiting calls.')
                         logger.error("Check auth to make sure it's not expired.")
+                        sys.exit(1)
                         return
                     elif e.status == 400:
                         logger.error('Error received on ' + str(object) + ': '  + str(e))
@@ -551,7 +709,8 @@ def read_auth(filepath: str, logger=logging, encryption_pw=None):
             if os.path.isfile(filepath):
                 authString = open(filepath, "r").read()
     except Exception as e:
-        logger.info(f"Could not read current authfile: {str(e)}\nThis is normal if this is your first time running auth.")
+        logger.error(f"Could not read current authfile: {str(e)}")
+        sys.exit(1)
 
     return authString
 

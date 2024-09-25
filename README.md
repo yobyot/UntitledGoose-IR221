@@ -90,6 +90,9 @@ A service principal with the following permissions:
 
 API Permissions
 ```
+Log Analytics API
+- Data.Read (Application)
+
 Microsoft Threat Protection:
 - AdvancedHunting.Read.All (Application)
 
@@ -124,7 +127,7 @@ Microsoft Graph:
 - UserAuthenticationMethod.Read.All (Application)
 
 Office 365 Exchange Online
-- Exchange.ManageAsApp
+- Exchange.ManageAsApp (Application)
 ```
 
 Azure Subscription IAM Roles
