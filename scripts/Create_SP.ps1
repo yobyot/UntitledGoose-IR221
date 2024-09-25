@@ -25,6 +25,9 @@ $script:UserSecrets = @()
 $script:OutputSubscriptionId = @()
 
 $permissions = @{
+	"Log Analytics API" = @(
+		"Data.Read"
+	)
 	"Microsoft Threat Protection" = @(
 		"AdvancedHunting.Read.All"
 	)
@@ -66,6 +69,7 @@ $permissions = @{
 		"SecurityEvents.Read.All",
 		"Team.ReadBasic.All",
 		"TeamsAppInstallation.ReadForUser.All",
+		"ThreatHunting.Read.All",
 		"User.Read.All",
 		"UserAuthenticationMethod.Read.All"
 	)
@@ -90,7 +94,7 @@ $exchange_roles = @(
 
 # Install the required modules if not already installed
 Function Install-Modules {
-	Write-Host "Starting package installation. This part can take up to 20 minutes"
+	Write-Host "Starting package installation. This part can take a few minutes"
 	$GraphVersion = 2.15.0
 	$AzVersion = 6.16.0
 	If ((-not (Get-Module -Name Az.Resources -ListAvailable)) -or ($null -eq (Get-InstalledModule Az.Resources -RequiredVersion $AzVersion))) {
@@ -289,9 +293,12 @@ Function Create-ExchangeServicePrincipal {
 	# Get the Service Principal Id
 	$ObjectId = (Get-MgServicePrincipal -Filter "displayName eq '$AppName'").Id
 
-	$RoleGroup = New-RoleGroup -Name $AppName -Roles $exchange_roles
+	$RoleGroup = Get-RoleGroup $AppName
+	if (-not $RoleGroup) {
+		$RoleGroup = New-RoleGroup -Name $AppName -Roles $exchange_roles
+	}
 	if ($RoleGroup) {
-		Write-Host "Role Group '$AppName' created"
+		Write-Host "Role Group '$AppName' created or exists"
 		# Associate the Exchange Online service principal with the new service principal
 		$ServicePrincipal = New-ServicePrincipal -AppId $AppId -ObjectId $ObjectId -DisplayName $AppName
 	}

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.3] - Enter the honk - 2024-09-23
+### Added
+- Better task naming for logging
+- Added Microsoft Graph role ThreatHunting.Read.All
+- Added Log Analytics API role Data.Read
+- Added dumping for Log Analytics Workspace
+
+### Changed
+- Updated versions of required packages
+- Create_SP.ps1 script will find existing an existing role group with the app name instead of erroring
+
+### Fixed
+- Resolved issue with dumper cmd arguments for honk command not working (e.g. goosey honk --entraid)
+- Issue identified in d4iot dumpers 
+
 ## [2.0.2] - Enter the honk - 2024-08-21
 ### Added
 - Better task naming for logging

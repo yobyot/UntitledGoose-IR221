@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:86908f7c-50c4-41d3-afd1-0a08950ba0c0",
+  "serialNumber": "urn:uuid:5b3670f2-1243-4478-93a9-ffd2753b4fe6",
   "version": 1,
   "metadata": {
-    "timestamp": "2024-08-21T14:35:56-04:00",
+    "timestamp": "2024-09-23T14:15:37-04:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -243,12 +243,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/aiohttp@3.10.4?package-id=7bc574cba76256fb",
+      "bom-ref": "pkg:pypi/aiohttp@3.10.5?package-id=68ce8e4270bf2076",
       "type": "library",
       "name": "aiohttp",
-      "version": "3.10.4",
-      "cpe": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/aiohttp@3.10.4",
+      "version": "3.10.5",
+      "cpe": "cpe:2.3:a:python-aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/aiohttp@3.10.5",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -268,47 +268,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:aiohttp:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:aiohttp:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:aiohttp:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:aiohttp:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:aiohttp:aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:aiohttp:aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:aiohttp:3.10.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:aiohttp:3.10.5:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -773,12 +773,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/azure-core@1.30.2?package-id=2e78712a41f6d180",
+      "bom-ref": "pkg:pypi/azure-core@1.31.0?package-id=a279403b6fcd431f",
       "type": "library",
       "name": "azure-core",
-      "version": "1.30.2",
-      "cpe": "cpe:2.3:a:python-azure-core:python-azure-core:1.30.2:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/azure-core@1.30.2",
+      "version": "1.31.0",
+      "cpe": "cpe:2.3:a:python-azure-core:python-azure-core:1.31.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/azure-core@1.31.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -798,127 +798,127 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_core:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_core:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_core:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_core:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-core:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-core:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-core:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-core:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_core:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_core:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_core:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_core:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python-azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python-azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python_azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python_azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-core:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-core:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-core:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-core:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_core:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_core:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_core:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_core:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure-core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure-core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure_core:1.30.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure_core:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -927,12 +927,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/azure-identity@1.17.1?package-id=946bc275bc4af2bf",
+      "bom-ref": "pkg:pypi/azure-identity@1.18.0?package-id=40da46bae3dde07a",
       "type": "library",
       "name": "azure-identity",
-      "version": "1.17.1",
-      "cpe": "cpe:2.3:a:python-azure-identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/azure-identity@1.17.1",
+      "version": "1.18.0",
+      "cpe": "cpe:2.3:a:python-azure-identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/azure-identity@1.18.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -952,127 +952,127 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_identity:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_identity:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_identity:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_identity:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_identity:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_identity:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_identity:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_identity:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python-azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python-azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python_azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python_azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure-identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure-identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure_identity:1.17.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure_identity:1.18.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -1081,12 +1081,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/azure-mgmt-compute@32.0.0?package-id=dd3e9e274d7f03af",
+      "bom-ref": "pkg:pypi/azure-mgmt-compute@33.0.0?package-id=18197512ff936244",
       "type": "library",
       "name": "azure-mgmt-compute",
-      "version": "32.0.0",
-      "cpe": "cpe:2.3:a:python-azure-mgmt-compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/azure-mgmt-compute@32.0.0",
+      "version": "33.0.0",
+      "cpe": "cpe:2.3:a:python-azure-mgmt-compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/azure-mgmt-compute@33.0.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -1106,191 +1106,191 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_compute:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_compute:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_compute:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_compute:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_compute:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_compute:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_compute:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_compute:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python-azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python-azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python_azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python_azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure-mgmt-compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure-mgmt-compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure_mgmt_compute:32.0.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure_mgmt_compute:33.0.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -2607,12 +2607,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/azure-mgmt-web@7.3.0?package-id=b27877859c3ccf9b",
+      "bom-ref": "pkg:pypi/azure-mgmt-web@7.3.1?package-id=b180f5958213a504",
       "type": "library",
       "name": "azure-mgmt-web",
-      "version": "7.3.0",
-      "cpe": "cpe:2.3:a:python-azure-mgmt-web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/azure-mgmt-web@7.3.0",
+      "version": "7.3.1",
+      "cpe": "cpe:2.3:a:python-azure-mgmt-web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/azure-mgmt-web@7.3.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -2632,191 +2632,191 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_web:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_web:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_web:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_web:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt-web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt-web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt_web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt_web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt-web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt-web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_web:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_web:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt_web:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt_web:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python-azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python-azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python_azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python_azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_mgmt:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_mgmt:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure-mgmt-web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure-mgmt-web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure_mgmt_web:7.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure_mgmt_web:7.3.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -2825,12 +2825,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/azure-storage-blob@12.22.0?package-id=6149c68ee862704d",
+      "bom-ref": "pkg:pypi/azure-storage-blob@12.23.0?package-id=701d7477e360de56",
       "type": "library",
       "name": "azure-storage-blob",
-      "version": "12.22.0",
-      "cpe": "cpe:2.3:a:python-azure-storage-blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/azure-storage-blob@12.22.0",
+      "version": "12.23.0",
+      "cpe": "cpe:2.3:a:python-azure-storage-blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/azure-storage-blob@12.23.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -2850,191 +2850,191 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage-blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage-blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage_blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage_blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage_blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage_blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage-blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage-blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage-blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage-blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage_blob:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage_blob:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage_blob:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage_blob:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage-blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage-blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage-blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage-blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage_blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage_blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage_blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage_blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure-storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure-storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure_storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure_storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage-blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage-blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage-blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage-blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage_blob:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage_blob:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage_blob:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage_blob:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure-storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure-storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure_storage:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure_storage:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python-azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python-azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:python_azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:python_azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure-storage-blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure-storage-blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:azure:azure_storage_blob:12.22.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:azure:azure_storage_blob:12.23.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -3043,12 +3043,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/certifi@2024.7.4?package-id=b8b3277b0ead0f2f",
+      "bom-ref": "pkg:pypi/certifi@2024.8.30?package-id=fd648d9bb1b5b7a0",
       "type": "library",
       "name": "certifi",
-      "version": "2024.7.4",
-      "cpe": "cpe:2.3:a:python-certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/certifi@2024.7.4",
+      "version": "2024.8.30",
+      "cpe": "cpe:2.3:a:python-certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/certifi@2024.8.30",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -3068,47 +3068,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:certifi:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:certifi:python-certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:certifi:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:certifi:python_certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:certifi:certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:certifi:certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:certifi:2024.7.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:certifi:2024.8.30:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -3117,12 +3117,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/cffi@1.17.0?package-id=ddafbdb6b8f26cd6",
+      "bom-ref": "pkg:pypi/cffi@1.17.1?package-id=f9bea74e149fe0b6",
       "type": "library",
       "name": "cffi",
-      "version": "1.17.0",
-      "cpe": "cpe:2.3:a:python-cffi:python-cffi:1.17.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/cffi@1.17.0",
+      "version": "1.17.1",
+      "cpe": "cpe:2.3:a:python-cffi:python-cffi:1.17.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/cffi@1.17.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -3142,47 +3142,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_cffi:python-cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_cffi:python-cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:cffi:python-cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:cffi:python-cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:cffi:python_cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:cffi:python_cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-cffi:cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_cffi:cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:cffi:cffi:1.17.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:cffi:cffi:1.17.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -3419,12 +3419,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/cryptography@43.0.0?package-id=33694983a03200a7",
+      "bom-ref": "pkg:pypi/cryptography@43.0.1?package-id=6744b73500c91d22",
       "type": "library",
       "name": "cryptography",
-      "version": "43.0.0",
-      "cpe": "cpe:2.3:a:python-cryptography_project:python-cryptography:43.0.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/cryptography@43.0.0",
+      "version": "43.0.1",
+      "cpe": "cpe:2.3:a:python-cryptography_project:python-cryptography:43.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/cryptography@43.0.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4127,12 +4127,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/idna@3.7?package-id=6600c771e3e21b62",
+      "bom-ref": "pkg:pypi/idna@3.10?package-id=2678420953dedac4",
       "type": "library",
       "name": "idna",
-      "version": "3.7",
-      "cpe": "cpe:2.3:a:python-idna:python-idna:3.7:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/idna@3.7",
+      "version": "3.10",
+      "cpe": "cpe:2.3:a:python-idna:python-idna:3.10:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/idna@3.10",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4152,47 +4152,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-idna:python_idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-idna:python_idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_idna:python-idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_idna:python-idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_idna:python_idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_idna:python_idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:idna:python-idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:idna:python-idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:idna:python_idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:idna:python_idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-idna:idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-idna:idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_idna:idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_idna:idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:idna:idna:3.7:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:idna:idna:3.10:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -4201,12 +4201,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/importlib-metadata@8.2.0?package-id=dc6b9a2c7b5cbca9",
+      "bom-ref": "pkg:pypi/importlib-metadata@8.5.0?package-id=097ee7c1b103f8ed",
       "type": "library",
       "name": "importlib-metadata",
-      "version": "8.2.0",
-      "cpe": "cpe:2.3:a:python-importlib-metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/importlib-metadata@8.2.0",
+      "version": "8.5.0",
+      "cpe": "cpe:2.3:a:python-importlib-metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/importlib-metadata@8.5.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4226,127 +4226,127 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib-metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib-metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib_metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib_metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib_metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib_metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib-metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib-metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib-metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib-metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib_metadata:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib_metadata:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib_metadata:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib_metadata:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib-metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib-metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib-metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib-metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib_metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib_metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib_metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib_metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib-metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib-metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib-metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib-metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib_metadata:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib_metadata:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib_metadata:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib_metadata:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:importlib:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:importlib:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:importlib-metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:importlib-metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:importlib_metadata:8.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:importlib_metadata:8.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -4577,12 +4577,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/keyring@25.3.0?package-id=593aef83a66341c1",
+      "bom-ref": "pkg:pypi/keyring@25.4.1?package-id=f113c808cb623c3e",
       "type": "library",
       "name": "keyring",
-      "version": "25.3.0",
-      "cpe": "cpe:2.3:a:python-keyring:python-keyring:25.3.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/keyring@25.3.0",
+      "version": "25.4.1",
+      "cpe": "cpe:2.3:a:python-keyring:python-keyring:25.4.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/keyring@25.4.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4602,47 +4602,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_keyring:python-keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_keyring:python-keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:keyring:python-keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:keyring:python-keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:keyring:python_keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:keyring:python_keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-keyring:keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_keyring:keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:keyring:keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:keyring:keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:keyring:25.3.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:keyring:25.4.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -4799,12 +4799,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/more-itertools@10.4.0?package-id=e924fc61eb8ff701",
+      "bom-ref": "pkg:pypi/more-itertools@10.5.0?package-id=ba44a2b9d6805222",
       "type": "library",
       "name": "more-itertools",
-      "version": "10.4.0",
-      "cpe": "cpe:2.3:a:python-more-itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/more-itertools@10.4.0",
+      "version": "10.5.0",
+      "cpe": "cpe:2.3:a:python-more-itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/more-itertools@10.5.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4824,127 +4824,127 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more-itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more-itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more_itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more_itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more_itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more_itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more-itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more-itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more-itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more-itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more_itertools:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more_itertools:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more_itertools:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more_itertools:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more-itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more-itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more-itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more-itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more_itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more_itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more_itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more_itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more-itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more-itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more-itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more-itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more_itertools:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more_itertools:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more_itertools:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more_itertools:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more:python-more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more:python-more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more:python_more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more:python_more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-more:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_more:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more:more-itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more:more-itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:more:more_itertools:10.4.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:more:more_itertools:10.5.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -4953,12 +4953,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/msal@1.30.0?package-id=320c734c2cd641a9",
+      "bom-ref": "pkg:pypi/msal@1.31.0?package-id=cfc9f27722b894ea",
       "type": "library",
       "name": "msal",
-      "version": "1.30.0",
-      "cpe": "cpe:2.3:a:python-msal:python-msal:1.30.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/msal@1.30.0",
+      "version": "1.31.0",
+      "cpe": "cpe:2.3:a:python-msal:python-msal:1.31.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/msal@1.31.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -4978,47 +4978,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-msal:python_msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msal:python-msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_msal:python-msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_msal:python_msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msal:python-msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:msal:python-msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msal:python_msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:msal:python_msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-msal:msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-msal:msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_msal:msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_msal:msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:msal:msal:1.30.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:msal:msal:1.31.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -5329,12 +5329,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/multidict@6.0.5?package-id=e9ab5d7dc85b85d2",
+      "bom-ref": "pkg:pypi/multidict@6.1.0?package-id=8efbcee082935ebb",
       "type": "library",
       "name": "multidict",
-      "version": "6.0.5",
-      "cpe": "cpe:2.3:a:python-multidict:python-multidict:6.0.5:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/multidict@6.0.5",
+      "version": "6.1.0",
+      "cpe": "cpe:2.3:a:python-multidict:python-multidict:6.1.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/multidict@6.1.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5354,47 +5354,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_multidict:python-multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_multidict:python-multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:multidict:python-multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:multidict:python-multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:multidict:python_multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:multidict:python_multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-multidict:multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_multidict:multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:multidict:multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:multidict:multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:multidict:6.0.5:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:multidict:6.1.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -5625,12 +5625,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/pathvalidate@3.2.0?package-id=43193211b24e82e8",
+      "bom-ref": "pkg:pypi/pathvalidate@3.2.1?package-id=24eb8af432aec778",
       "type": "library",
       "name": "pathvalidate",
-      "version": "3.2.0",
-      "cpe": "cpe:2.3:a:python-pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/pathvalidate@3.2.0",
+      "version": "3.2.1",
+      "cpe": "cpe:2.3:a:python-pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pathvalidate@3.2.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5650,47 +5650,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pathvalidate:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pathvalidate:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pathvalidate:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pathvalidate:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pathvalidate:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pathvalidate:pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pathvalidate:3.2.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:pathvalidate:3.2.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -5847,12 +5847,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/pyasn1@0.6.0?package-id=44b885818e87a2ef",
+      "bom-ref": "pkg:pypi/pyasn1@0.6.1?package-id=664d276e206e6e0b",
       "type": "library",
       "name": "pyasn1",
-      "version": "0.6.0",
-      "cpe": "cpe:2.3:a:python-pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/pyasn1@0.6.0",
+      "version": "0.6.1",
+      "cpe": "cpe:2.3:a:python-pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pyasn1@0.6.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -5872,47 +5872,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyasn1:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyasn1:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyasn1:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyasn1:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyasn1:pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyasn1:pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pyasn1:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:pyasn1:0.6.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -5995,12 +5995,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/pyparsing@3.1.2?package-id=0f5919f301109bab",
+      "bom-ref": "pkg:pypi/pyparsing@3.1.4?package-id=6c3b61c772a8d2fd",
       "type": "library",
       "name": "pyparsing",
-      "version": "3.1.2",
-      "cpe": "cpe:2.3:a:python-pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/pyparsing@3.1.2",
+      "version": "3.1.4",
+      "cpe": "cpe:2.3:a:python-pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pyparsing@3.1.4",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6020,47 +6020,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyparsing:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyparsing:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyparsing:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyparsing:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pyparsing:pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pyparsing:pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pyparsing:3.1.2:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:pyparsing:3.1.4:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -6119,12 +6119,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/pytz@2024.1?package-id=edaef6570e946bce",
+      "bom-ref": "pkg:pypi/pytz@2024.2?package-id=18ad7108bd85e0e5",
       "type": "library",
       "name": "pytz",
-      "version": "2024.1",
-      "cpe": "cpe:2.3:a:python-pytz:python-pytz:2024.1:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/pytz@2024.1",
+      "version": "2024.2",
+      "cpe": "cpe:2.3:a:python-pytz:python-pytz:2024.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pytz@2024.2",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6144,47 +6144,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pytz:python-pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pytz:python-pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-pytz:pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-pytz:pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_pytz:pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_pytz:pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pytz:python-pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pytz:python-pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pytz:python_pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pytz:python_pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:pytz:pytz:2024.1:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:pytz:pytz:2024.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -6923,12 +6923,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/urllib3@2.2.2?package-id=571dd3dddb95174a",
+      "bom-ref": "pkg:pypi/urllib3@2.2.3?package-id=200cd377500efae3",
       "type": "library",
       "name": "urllib3",
-      "version": "2.2.2",
-      "cpe": "cpe:2.3:a:python:urllib3:2.2.2:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/urllib3@2.2.2",
+      "version": "2.2.3",
+      "cpe": "cpe:2.3:a:python:urllib3:2.2.3:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/urllib3@2.2.3",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6953,12 +6953,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/wadllib@1.3.6?package-id=2ec4536957c99a19",
+      "bom-ref": "pkg:pypi/wadllib@1.3.9?package-id=ad27d7cb90eb9b21",
       "type": "library",
       "name": "wadllib",
-      "version": "1.3.6",
-      "cpe": "cpe:2.3:a:python-wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/wadllib@1.3.6",
+      "version": "1.3.9",
+      "cpe": "cpe:2.3:a:python-wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/wadllib@1.3.9",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -6978,47 +6978,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wadllib:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:wadllib:python-wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wadllib:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:wadllib:python_wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:wadllib:wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:wadllib:wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:wadllib:1.3.6:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:wadllib:1.3.9:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -7101,12 +7101,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/yarl@1.9.4?package-id=cba52cc792096e58",
+      "bom-ref": "pkg:pypi/yarl@1.11.1?package-id=e69bea513abe4c24",
       "type": "library",
       "name": "yarl",
-      "version": "1.9.4",
-      "cpe": "cpe:2.3:a:python-yarl:python-yarl:1.9.4:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/yarl@1.9.4",
+      "version": "1.11.1",
+      "cpe": "cpe:2.3:a:python-yarl:python-yarl:1.11.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/yarl@1.11.1",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7126,47 +7126,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_yarl:python-yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_yarl:python-yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-yarl:yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_yarl:yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:yarl:python-yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:yarl:python-yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:yarl:python_yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:yarl:python_yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:yarl:yarl:1.9.4:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:yarl:yarl:1.11.1:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
@@ -7175,12 +7175,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/zipp@3.20.0?package-id=46f41ac016947d68",
+      "bom-ref": "pkg:pypi/zipp@3.20.2?package-id=24caf9ae9b8c4214",
       "type": "library",
       "name": "zipp",
-      "version": "3.20.0",
-      "cpe": "cpe:2.3:a:python-zipp:python-zipp:3.20.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/zipp@3.20.0",
+      "version": "3.20.2",
+      "cpe": "cpe:2.3:a:python-zipp:python-zipp:3.20.2:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/zipp@3.20.2",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -7200,47 +7200,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_zipp:python-zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_zipp:python-zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-zipp:zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_zipp:zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:zipp:python-zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:zipp:python-zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:zipp:python_zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:zipp:python_zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:zipp:zipp:3.20.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:zipp:zipp:3.20.2:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",

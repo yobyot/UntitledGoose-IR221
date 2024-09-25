@@ -34,9 +34,11 @@ utc = pytz.UTC
 
 class AzureDataDumper(DataDumper):
 
-    def __init__(self, output_dir, reports_dir, session, app_auth, config, auth_un_pw, debug):
+    def __init__(self, output_dir, reports_dir, session, app_auth, config, auth_un_pw, loganalytics_app_auth, debug):
         super().__init__(f'{output_dir}{os.path.sep}azure', reports_dir, None, app_auth, session, debug)
         self.logger = setup_logger(__name__, debug)
+        self.failurefile = os.path.join(reports_dir, '_no_results.json')
+        self.loganalytics_app_auth = loganalytics_app_auth
         if auth_un_pw is not None:
             if auth_un_pw['auth']['appid']:
                 self.app_id = auth_un_pw['auth']['appid']
@@ -212,73 +214,72 @@ class AzureDataDumper(DataDumper):
                                 self.logger.error("Please re-auth.")
                                 sys.exit(1)
 
-            for id in alert_ids:
-                if self.us_gov.lower() == "true":
-                    availability_url =  "https://management.azure.us" + id + "/pcapAvailability?api-version=2021-07-01-preview"
-                else:
-                    availability_url =  "https://management.azure.com" + id + "/pcapAvailability?api-version=2021-07-01-preview"
-                i = id.split("/")[-1]
-                outfile = os.path.join(pcap_dir, "pcap_" + str(i) + ".pcap")
-                async with self.ahsession.request('POST', availability_url, headers=header, ssl=False) as r:
-                    result = await r.json()
-                    if 'error' in result:
-                        if result['error']['code'] == 'NotFound':
-                            self.logger.debug("Resource not found. Exiting.")
-                            return
-                        elif result['error']['code'] == 'ExpiredAuthenticationToken':
-                            self.logger.error("Error with authentication token: " + result['error']['message'])
-                            self.logger.error("Please re-auth.")
-                            sys.exit(1)
+                for id in alert_ids:
+                    if self.us_gov.lower() == "true":
+                        availability_url =  "https://management.azure.us" + id + "/pcapAvailability?api-version=2021-07-01-preview"
+                    else:
+                        availability_url =  "https://management.azure.com" + id + "/pcapAvailability?api-version=2021-07-01-preview"
+                    i = id.split("/")[-1]
+                    outfile = os.path.join(pcap_dir, "pcap_" + str(i) + ".pcap")
+                    async with self.ahsession.request('POST', availability_url, headers=header, ssl=False) as r:
+                        result = await r.json()
+                        if 'error' in result:
+                            if result['error']['code'] == 'NotFound':
+                                self.logger.debug("Resource not found. Exiting.")
+                                return
+                            elif result['error']['code'] == 'ExpiredAuthenticationToken':
+                                self.logger.error("Error with authentication token: " + result['error']['message'])
+                                self.logger.error("Please re-auth.")
+                                sys.exit(1)
 
-                    if 'status' in result:
-                        if result['status'] == 'Done':
-                            self.logger.info("PCAP downloaded for alert id %s." % (i))
-                            download_url = result['downloadUrl']
-                            async with self.ahsession.request('GET', download_url,  ssl=False, allow_redirects=True) as r:
-                                output = await r.read()
-                                with open(outfile, 'wb') as f:
-                                    f.write(output)
-
-                        elif result['status'] == 'Available':
-                            if 'error' in result:
-                                if result['error']['code'] == 'PCAP_NOT_FOUND':
-                                    self.logger.debug("PCAP not found for alert id %s. Proceeding" % (i))
-                                    continue
-                            else:
-                                self.logger.debug("PCAP available for alert id %s." % (i))
-
-                            if self.us_gov.lower() == "true":
-                                request_url = "https://management.azure.us" + id + "/pcapRequest?api-version=2021-07-01-preview"
-                            else:
-                                request_url = "https://management.azure.com" + id + "/pcapRequest?api-version=2021-07-01-preview"
-
-                            status = None
-
-                            while status != "Done":
-                                 async with self.ahsession.request('POST', request_url, headers=header, ssl=False) as r:
-                                    result = await r.json()
-                                    if 'error' in result:
-                                        self.logger.error("Error: " + result['error']['message'])
-                                    else:
-                                        status = result['status']
-                                    await asyncio.sleep(5)
-
-                            download_url = result['downloadUrl']
-                            async with self.ahsession.request('GET', download_url,  ssl=False, allow_redirects=True) as r:
-                                output = await r.read()
-                                with open(outfile, 'wb') as f:
-                                    f.write(output)
+                        if 'status' in result:
+                            if result['status'] == 'Done':
                                 self.logger.info("PCAP downloaded for alert id %s." % (i))
+                                download_url = result['downloadUrl']
+                                async with self.ahsession.request('GET', download_url,  ssl=False, allow_redirects=True) as r:
+                                    output = await r.read()
+                                    with open(outfile, 'wb') as f:
+                                        f.write(output)
+
+                            elif result['status'] == 'Available':
+                                if 'error' in result:
+                                    if result['error']['code'] == 'PCAP_NOT_FOUND':
+                                        self.logger.debug("PCAP not found for alert id %s. Proceeding" % (i))
+                                        continue
+                                else:
+                                    self.logger.debug("PCAP available for alert id %s." % (i))
+
+                                if self.us_gov.lower() == "true":
+                                    request_url = "https://management.azure.us" + id + "/pcapRequest?api-version=2021-07-01-preview"
+                                else:
+                                    request_url = "https://management.azure.com" + id + "/pcapRequest?api-version=2021-07-01-preview"
+
+                                status = None
+
+                                while status != "Done":
+                                     async with self.ahsession.request('POST', request_url, headers=header, ssl=False) as r:
+                                        result = await r.json()
+                                        if 'error' in result:
+                                            self.logger.error("Error: " + result['error']['message'])
+                                        else:
+                                            status = result['status']
+                                        await asyncio.sleep(5)
+
+                                download_url = result['downloadUrl']
+                                async with self.ahsession.request('GET', download_url,  ssl=False, allow_redirects=True) as r:
+                                    output = await r.read()
+                                    with open(outfile, 'wb') as f:
+                                        f.write(output)
+                                    self.logger.info("PCAP downloaded for alert id %s." % (i))
 
 
-                        elif result['status'] == "UnsupportedAlert":
-                             self.logger.debug("PCAP not available for alert id %s. Proceeding" % (i))
-                        elif result['status'] == "DisconnectedSensor":
-                            self.logger.error("Sensor is disconnected. Stopping PCAP pull.")
-                            return
-                        else:
-                            self.logger.debug(result)
-            self.logger.info("Getting D4IOT portal pcaps from " + subscriptionId + "...")
+                            elif result['status'] == "UnsupportedAlert":
+                                 self.logger.debug("PCAP not available for alert id %s. Proceeding" % (i))
+                            elif result['status'] == "DisconnectedSensor":
+                                self.logger.error("Sensor is disconnected. Stopping PCAP pull.")
+                                return
+                            else:
+                                self.logger.debug(result)
 
     async def _dump_portal_alerts(self) -> None:
         """
@@ -342,29 +343,29 @@ class AzureDataDumper(DataDumper):
                                 self.logger.error("Please re-auth.")
                                 os._exit(1)
 
-                for val in device_grps:
-                    if self.us_gov.lower() == "true":
-                        url = "https://management.azure.us/subscriptions/" + subscriptionId + "/providers/Microsoft.IoTSecurity/locations/" + location + "/deviceGroups/" + val + "/alerts?api-version=2021-07-01-preview"
-                    else:
-                        url = "https://management.azure.com/subscriptions/" + subscriptionId + "/providers/Microsoft.IoTSecurity/locations/" + location + "/deviceGroups/" + val + "/alerts?api-version=2021-07-01-preview"
+                    for val in device_grps:
+                        if self.us_gov.lower() == "true":
+                            url = "https://management.azure.us/subscriptions/" + subscriptionId + "/providers/Microsoft.IoTSecurity/locations/" + location + "/deviceGroups/" + val + "/alerts?api-version=2021-07-01-preview"
+                        else:
+                            url = "https://management.azure.com/subscriptions/" + subscriptionId + "/providers/Microsoft.IoTSecurity/locations/" + location + "/deviceGroups/" + val + "/alerts?api-version=2021-07-01-preview"
 
-                    async with self.ahsession.request('GET', url, headers=header, ssl=False) as r:
-                        result = await r.json()
-                        nexturl = None
-                        if '@odata.nextLink' in result:
-                            nexturl = result['@odata.nextLink']
-                        if 'value' in result:
-                            with open(outfile, 'a+', encoding='utf-8') as f:
-                                for x in result['value']:
-                                    f.write(json.dumps(x) + "\n")
-                                f.flush()
-                                os.fsync(f)
-                        elif 'error' in result:
-                            if result['error']['code'] == 'ExpiredAuthenticationToken':
-                                self.logger.error("Error with authentication token: " + result['error']['message'])
-                                self.logger.error("Please re-auth.")
-                                os._exit(1)
-                        await get_nextlink(nexturl, outfile, self.ahsession, self.logger, self.app_auth)
+                        async with self.ahsession.request('GET', url, headers=header, ssl=False) as r:
+                            result = await r.json()
+                            nexturl = None
+                            if '@odata.nextLink' in result:
+                                nexturl = result['@odata.nextLink']
+                            if 'value' in result:
+                                with open(outfile, 'a+', encoding='utf-8') as f:
+                                    for x in result['value']:
+                                        f.write(json.dumps(x) + "\n")
+                                    f.flush()
+                                    os.fsync(f)
+                            elif 'error' in result:
+                                if result['error']['code'] == 'ExpiredAuthenticationToken':
+                                    self.logger.error("Error with authentication token: " + result['error']['message'])
+                                    self.logger.error("Please re-auth.")
+                                    os._exit(1)
+                            await get_nextlink(nexturl, outfile, self.ahsession, self.logger, self.app_auth)
                 self.logger.info("Finished getting D4IOT portal alerts from " + subscriptionId + ".")
 
     async def _dump_portal_defendersettings(self) -> None:
@@ -529,6 +530,7 @@ class AzureDataDumper(DataDumper):
                             continue
                     await asyncio.sleep(0) # make it blocking so that other coroutines can continue
                 self.logger.info("Finished geting diagnostic settings from " + sub_id + ".")
+            await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
     async def _dump_vm_config(self) -> None:
         """
@@ -560,6 +562,7 @@ class AzureDataDumper(DataDumper):
                         await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
                     self.logger.info("Finished geting virtual machine configurations from " + sub_id + ".")
+                await asyncio.sleep(0) # make it blocking so that other coroutines can continue
             except HttpResponseError:
                 self.logger.debug("Caught HTTP Response Error on subscription " + sub_id)
                 continue
@@ -590,6 +593,7 @@ class AzureDataDumper(DataDumper):
                                     f.write("\n")
                                     f.flush()
                                     os.fsync(f)
+                                await asyncio.sleep(0) # make it blocking so that other coroutines can continue
                         await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
                     self.logger.info('Finished getting all web app Azure Container Configs for ' + sub_id + '.')
@@ -649,6 +653,7 @@ class AzureDataDumper(DataDumper):
                                         f.write("\n")
                                         f.flush()
                                         os.fsync(f)
+                                await asyncio.sleep(0) # make it blocking so that other coroutines can continue
                         await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
                     self.logger.info('Finished dumping all file shares for' + sub_id + '.')
@@ -745,6 +750,7 @@ class AzureDataDumper(DataDumper):
                     f.write("\n")
                     f.flush()
                     os.fsync(f)
+                    await asyncio.sleep(0) # make it blocking so that other coroutines can continue
             with open(statefile, 'w') as f:
                 f.write(end_time)
             await asyncio.sleep(0) # make it blocking so that other coroutines can continue
@@ -815,11 +821,170 @@ class AzureDataDumper(DataDumper):
                 else:
                     self.logger.debug(f'No state. Using {start_date} - {final_time}')
                     await self.auxillary_activity_log(start_date, final_time, i, statefile)
+                await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
             except HttpResponseError as e:
                 print(e)
                 self.logger.debug("Caught HTTP Response Error on subscription " + self.subscription_id_list[i])
                 continue
+
+    async def dump_log_analytic_workspaces(self):
+        """
+        Dump list of log analytic workspaces and their table contents
+        """
+        # default end time. Now
+        end = utc.localize(datetime.now())
+
+        # defult start tiem
+        # For LAW 12 years is the maximum storage period
+        start = end - timedelta(days=364*12)
+
+        if self.date_range:
+            self.logger.debug(f'MDE Dump using specified date range: {self.date_start} to {self.date_end}')
+            start = dateutil.parser.parse(self.date_start).replace(tzinfo=utc)
+            end = dateutil.parser.parse(self.date_end).replace(tzinfo=utc)
+
+        tasks = []
+        for subscriptionId in self.subscription_id_list:
+            url = f"https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.OperationalInsights/"
+            output_dir = os.path.join(self.output_dir, os.path.join(subscriptionId, "log_analytics_workspace"))
+            check_output_dir(output_dir, self.logger)
+            call_object = [url, self.app_auth, self.logger, output_dir, self.get_session()]
+            await helper_single_object("workspaces?api-version=2023-09-01", call_object, self.failurefile)
+            workspaces_file = os.path.join(output_dir, "workspaces.json")
+            with open(workspaces_file, "r") as f:
+                for line in f:
+                    #self.logger.debug(json.dumps(json.loads(line), indent=2))
+                    workspace_dict = json.loads(line)
+                    workspace_name = workspace_dict["name"]
+                    workspace_id = workspace_dict["id"]
+                    self.logger.debug(f"summarizing {workspace_name}")
+                    url = f"https://api.loganalytics.io/v1{workspace_id}/query"
+                    results, err, _, _ = await run_kql_query("search \"*\"", start, end, None, url, self.loganalytics_app_auth, self.logger, self.ahsession, summarize=True)
+                    #self.logger.debug(json.dumps(results, indent=2, default=str))
+                    for row in results:
+                        self.logger.debug(row)
+                        table = row["$table"]
+
+                        # create a task dumping the table with the save state being per table per workspace
+                        workspace_log_dir = os.path.join(output_dir, workspace_name)
+                        check_output_dir(workspace_log_dir, self.logger)
+
+                        statefile = os.path.join(workspace_log_dir, f".{table}.savestate")
+                        outfile = os.path.join(workspace_log_dir, f"{table}.json")
+                        saved_end = load_state(statefile)
+                        table_start = start
+                        table_end = end
+                        if saved_end:
+                            table_start = max(saved_end, table_start)
+                        # Use asyncio to use asyncronous coroutines to help ensure we get data before it rolls off
+                        self.logger.debug(f"Generating table dump task for table: {table}, start: {start}, end: {end}")
+                        caller_name = asyncio.current_task().get_name()
+                        tasks.append(asyncio.create_task(self._dump_table(table, table_start, table_end, url, statefile=statefile, outfile=outfile),name=f"{caller_name}_{workspace_name}_{table}"))
+        await asyncio.gather(*tasks)
+
+
+    async def _dump_table(self, base_query, start, end, url, statefile, outfile, retries=3):
+        """
+        Description:
+            Query the log analytics workspace and pull logs for the table under the timeframe
+
+        Arguments:
+            base_query: what to start with for the query
+            start: starting timestamp
+            end: ending timestamp
+            path: path to the endpoint for the queries
+            output_dir: where to place the logs
+            machine_id: Optional id of a mahcine to filter down the query
+        """
+        totalResultCount = 0
+        totalResultEnd = start
+        totalSavedResults = 0
+        origStart = start
+        finalEnd = end
+        tries = 0
+        # final record is so that it will stop when it gets to the last record
+        # and we don't have to worry about the list being empty or changing the logic for
+        # an edge case
+        final_record = {"count": None,
+                        "start": end,
+                        "end": end + timedelta(1000),
+                        "done_status": False}
+        bounds = [final_record]
+        # initial query loop to set a baseline
+        summary = None
+        while start < finalEnd and tries < retries*2:
+            # Narrow down until we have a valid timeframe
+            summary, err, new_end, bounds = await run_kql_query(base_query, start, end, bounds, url, self.loganalytics_app_auth, self.logger, self.ahsession, summarize=True)
+            # If there are no results then we want to get to a timeframe that does contain results
+            if err:
+                tries += 1
+            elif summary != None and summary[0]["Count"] == 0:
+                tries = 0
+                # Check if there are no results in the whole time range. If so we return
+                if origStart == start and finalEnd == end:
+                    self.logger.debug(f"No logs for {base_query} from {start} to {end}")
+                    save_state(statefile, end)
+                    return
+                # Otherwise it just means this lower time segment has no logs and we remove it and continue
+                start = end
+                end = finalEnd
+                bounds = [final_record]
+                continue
+            elif summary != None and summary[0]["Count"] > 0:
+                tries = 0
+                totalResultCount = summary[0]["Count"]
+                totalResultEnd = end
+                start = dateutil.parser.parse(summary[0]["FirstEvent"])
+                # Need to make sure the start of each entry in the bounds matches the first start time
+                bounds[0]["start"] = start
+                break
+            end = new_end
+
+
+        while start < finalEnd and tries < retries:
+            startDate = start.strftime("%Y-%m-%dT%H:%M:%S")
+            endDate = end.strftime("%Y-%m-%dT%H:%M:%S")
+            session_set = set() # Unique results returned. Used to detect duplicates
+            bound = f'[{startDate} - {endDate}]'
+
+            # Run a search to get a summary of the timeframe. Faster and provides more info
+            if bounds[0]["count"] == None or \
+               (bounds[0]["count"] >= 10000 and end <= bounds[0]["end"]):
+                summary, err, end, bounds = await run_kql_query(base_query, start, end, bounds, url, self.loganalytics_app_auth, self.logger, self.ahsession, summarize=True)
+                if err:
+                    tries += 1
+                    continue
+                tries = 0
+                if summary[0]["Count"] >= 10000:
+                    continue
+                if summary[0]["Count"] == 0:
+                    end = bounds[0]["end"]
+                    start = bounds[0]["start"]
+                    continue
+
+            results, err, end, bounds = await run_kql_query(base_query, start, end, bounds, url, self.loganalytics_app_auth, self.logger, self.ahsession)
+            if err:
+                tries += 1
+                continue
+            if len(results) >= 0:
+                if start >= totalResultEnd:
+                    totalResultCount += len(results)
+                #self.logger.debug('Size of table: %s' % len(results))
+                #self.logger.debug('Size of table: %s' % result['Stats']['dataset_statistics'][0]['table_row_count'])
+                with open(outfile, 'a', encoding='utf-8') as f:
+                    for x in results:
+                        f.write(json.dumps(x) + '\n')
+
+                save_state(statefile, end)
+
+                tries = 0
+                end = bounds[0]["end"]
+                start = bounds[0]["start"]
+                if bounds[0]["count"] != None and bounds[0]["count"] >= 10000:
+                    new_end_ts = start.timestamp() + ((end.timestamp() - start.timestamp())/2)
+                    end = datetime.fromtimestamp(new_end_ts, utc)
+
 
     async def auxillary_storage_log_pull(self, container_name, log_type):
         for i in range(0, len(self.subscription_id_list)):
@@ -878,6 +1043,7 @@ class AzureDataDumper(DataDumper):
                                             f.write(entry)
                                 save_state_set.add(str(blob.name))
                                 json.dump({"set": list(save_state_set)}, open(save_state_path, "w"))
+                            await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
 
 
@@ -946,6 +1112,7 @@ class AzureDataDumper(DataDumper):
                             f.write("\n")
                             f.flush()
                             os.fsync(f)
+                    await asyncio.sleep(0) # make it blocking so that other coroutines can continue
 
                 self.logger.info("Finished dumping Azure " + name)
         except HttpResponseError as e:

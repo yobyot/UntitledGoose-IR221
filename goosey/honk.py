@@ -30,7 +30,7 @@ if sys.platform == 'win32':
 
 warnings.simplefilter('ignore')
 
-logger = None
+logger = setup_logger(__name__, debug=False)
 data_calls = {}
 
 async def run(args, config, auth, init_sections, auth_un_pw=None):
@@ -52,6 +52,7 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
 
     msft_graph_auth = {}
     msft_graph_app_auth = {}
+    loganalytics_app_auth = {}
 
     for key in auth['mfa']:
         if 'graph.microsoft.com' in key or 'graph.microsoft.us' in key:
@@ -68,6 +69,8 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
             msft_security_auth = auth['app_auth'][key]
         if 'outlook.office365.com' in key or 'outlook.office365.us' in key:
             o365_app_auth = auth['app_auth'][key]
+        if 'api.loganalytics.io' in key:
+            loganalytics_app_auth = auth['app_auth'][key]
 
     maindumper = DataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_graph_app_auth, session, args.debug)
 
@@ -87,7 +90,7 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
             entraiddumper = EntraIdDataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_graph_app_auth, maindumper.ahsession, config, args.debug)
             entraid = True
         if 'azure' in init_sections:
-            azure_dumper = AzureDataDumper(args.output_dir, args.reports_dir, maindumper.ahsession, mgmt_app_auth, config, auth_un_pw, args.debug)
+            azure_dumper = AzureDataDumper(args.output_dir, args.reports_dir, maindumper.ahsession, mgmt_app_auth, config, auth_un_pw, loganalytics_app_auth, args.debug)
             azure = True
         if 'mde' in init_sections:
             mdedumper = MDEDataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_security_center_auth, msft_security_auth, maindumper.ahsession, config, args.debug)
@@ -141,18 +144,23 @@ def parse_config(configfile, args, auth=None):
                 data_calls[section][key] = True
                 init_sections.append(section)
 
+    print(args.__dict__)
     if args.azure:
         for item in [x.replace('dump_', '') for x in dir(AzureDataDumper) if x.startswith('dump_')]:
             data_calls['azure'][item] = True
+        init_sections.append("azure")
     if args.entraid:
         for item in [x.replace('dump_', '') for x in dir(EntraIdDataDumper) if x.startswith('dump_')]:
             data_calls['entraid'][item] = True
+        init_sections.append("entraid")
     if args.m365:
         for item in [x.replace('dump_', '') for x in dir(M365DataDumper) if x.startswith('dump_')]:
             data_calls['m365'][item] = True
+        init_sections.append("m365")
     if args.mde:
         for item in [x.replace('dump_', '') for x in dir(MDEDataDumper) if x.startswith('dump_')]:
             data_calls['mde'][item] = True
+        init_sections.append("mde")
 
     logger.debug(json.dumps(data_calls, indent=2))
     return config, init_sections

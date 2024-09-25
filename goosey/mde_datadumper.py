@@ -345,7 +345,7 @@ class MDEDataDumper(DataDumper):
     def _insert_mde_record(self, record, bounds):
         """
         Description:
-            Add a record to the sorted ual_bounds_state.
+            Add a record to the sorted  bounds_state.
 
         Arguments:
             record: Tuple of (start, end, count, done_status)
