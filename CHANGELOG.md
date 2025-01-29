@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.4] - Enter the honk - 2024-01-28
+### Changed
+- Create_SP.ps1 script no longer prompts for cloudshell
+- Create_SP.ps1 script supports gcc high
+- goosey conf command now prompts for the client secret instead of having it provided as an argument
+
+### Fixed
+- Support for gcc and gcc high
+- Fixed errors in install script Create_SP.ps1
+
 ## [2.0.3] - Enter the honk - 2024-09-23
 ### Added
 - Better task naming for logging

@@ -48,10 +48,8 @@ def genconf(outpath_auth=".auth",
             #prompt_all=False,
             #collection_level=0,
             config_tenant=None,
-            config_us_government=False,
-            config_mde_gcc=False,
-            config_mde_gcc_high=False,
-            config_exo_us_government=False,
+            config_gcc=False,
+            config_gcc_high=False,
             config_subscriptionid="All",
             filters_date_start=None,
             filters_date_end=None,
@@ -76,7 +74,9 @@ def genconf(outpath_auth=".auth",
             d4iot=False,
             dict_config={},
             d4iot_dict_config={},
-            new=False):
+            new=False,
+            insecure=False,
+            debug=False):
     """
     Generate Configuration Files for Goose
 
@@ -84,12 +84,10 @@ def genconf(outpath_auth=".auth",
         outpath_auth: Path to output the auth config
         outpath_conf: Path to output the goose config
         auth_appid: The application ID of your service principal
-        auth_clientsecret: The client secret value of your service principal (not the secret ID)
+        auth_clientsecret: The client secret value of your service principal. WARNING should not be provided in goosey conf arguments unless doing testing
         config_tenant: The tenant ID of your AAD tenant
-        config_us_government: If you have a GCC High tenant
-        config_mde_gcc: If you have a GCC tenant with MDE
-        config_mde_gcc_high: If you have a GCC High tenant with MDE
-        config_exo_us_government: If your M365 tenant is a government tenant
+        config_gcc: If you have a GCC tenant
+        config_gcc_high: If you have a GCC High tenant
         config_subscriptionid: If you want to check all of your Azure subscriptions, set this to All, otherwise enter your Azure subscription ID. For multiple IDs, separate it with commas, no spaces
         filters_date_start: Format should be YYYY-MM-DD. If not set will default to the earliest date for log retention
         filters_date_end: Format should be YYYY-MM-DD. Will default to the present day
@@ -114,22 +112,43 @@ def genconf(outpath_auth=".auth",
         d4iot: Enable all d4iot log collection
         dict_config: dictionary of config values you want to set. Will only update valid config parameters. e.g. {"azure": {"activity_log": True}}
         d4iot_dict_config: dictionary of config values you want to set. Will only update valid config parameters. e.g. {"d4iot": {"mgmt_alerts": True}}
-        new: Overwrite the existing config. Default will not overwrite existing config, but will update config info if out of date
+        new: Overwrite the existing config. Default will not overwrite existing configs, but will update config info if out of date
+        insecure: Disable secure authentication handling (file encryption)
+        debug: Enable debug logging
     """
     # Grab arguments as a dictionary object
     args = locals()
     # parse the docstring for arguments so they can be used as comments
     docstring = parse(genconf.__doc__)
 
+    logger = setup_logger(__name__, args["debug"])
+
     # Generate dictionary of descriptions for each parameter
     docstring_params = {}
     for param in docstring.params:
         docstring_params[param.arg_name] = param.description
 
-    # Generate the auth conf
-    auth_s = genconfstring(args, docstring_params, "auth", "auth_")
-    with open(outpath_auth, 'w') as f:
-        f.write(auth_s)
+    # check if authfile exists.
+    if not ((args["insecure"] and os.path.isfile(outpath_auth)) or \
+            os.path.isfile(outpath_auth + ".aes")):
+        # If auth id not provided prompt for it
+        if not args["auth_appid"]:
+            args["auth_appid"] = input("Enter the App ID for the application: ")
+
+
+        # Check if appid is present. If so get the client secret by prompting
+        if args["auth_appid"] and not args["auth_clientsecret"]:
+            args["auth_clientsecret"] = getpass.getpass("Enter the Client Secret for the application: ")
+
+        # Generate the auth conf
+        auth_s = genconfstring(args, docstring_params, "auth", "auth_")
+        encryption_pw = None
+        if not args["insecure"]:
+            encryption_pw = getpass.getpass("Please create a password for file encryption: ")
+        write_auth(outpath_auth, auth_s, logger=logger, encryption_pw=encryption_pw, insecure=args["insecure"])
+        logger.debug("auth config created")
+    else:
+        logger.debug("Auth file already exists")
 
     if not new:
         old_config = configparser.ConfigParser()

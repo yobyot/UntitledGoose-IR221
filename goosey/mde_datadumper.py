@@ -19,16 +19,17 @@ today_date = datetime.today().replace(hour=0, minute=0, second=0, microsecond=0)
 
 class MDEDataDumper(DataDumper):
 
-    def __init__(self, output_dir, reports_dir, auth, app_auth, app_auth2, session, config, debug):
-        super().__init__(f'{output_dir}{os.path.sep}mde', reports_dir, auth, app_auth, session, debug)
+    def __init__(self, output_dir, reports_dir, app_auth, app_auth2, session, config, debug):
+        super().__init__(f'{output_dir}{os.path.sep}mde', reports_dir, app_auth, session, debug)
         self.app_auth2 = app_auth2
         self.failurefile = os.path.join(reports_dir, '_no_results.json')
         self.logger = setup_logger(__name__, debug)
-        self.us_government = config_get(config, 'config', 'us_government', self.logger).lower()
-        self.mde_gcc = config_get(config, 'config', 'mde_gcc', self.logger).lower()
-        self.mde_gcc_high = config_get(config, 'config', 'mde_gcc_high', self.logger).lower()
-        self.exo_us_government = config_get(config, 'config', 'exo_us_government', self.logger).lower()
-        self.call_object = [self.get_url(), self.app_auth, self.logger, self.output_dir, self.get_session()]
+        self.gcc = config_get(config, 'config', 'gcc', self.logger).lower() == "true"
+        self.gcc_high = config_get(config, 'config', 'gcc_high', self.logger).lower() == "true"
+        endpoints = get_endpoints(gcc=self.gcc, gcc_high=self.gcc_high)
+        self.mde_url = endpoints["securitycenter_api"] + "/"
+        self.identity_url = endpoints["security_api"]
+        self.call_object = [self.mde_url, self.app_auth, self.logger, self.output_dir, self.get_session()]
         self.mde_THRESHOLD = int(config_get(config, 'variables', 'mde_threshold'))
         self.mde_query_mode = config_get(config, 'variables', 'mde_query_mode')
         filters = config_get(config, 'filters', 'date_start', logger=self.logger)
@@ -49,15 +50,7 @@ class MDEDataDumper(DataDumper):
         elif self.mde_gcc_high == "true":
             return "https://api-gov.securitycenter.microsoft.us"
         else:
-            return "https://api-us.securitycenter.windows.com/"
-
-    def get_identity_url(self):
-        if self.mde_gcc == "true":
-            return "https://api-gcc.security.microsoft.us"
-        elif self.mde_gcc_high == "true":
-            return "https://api-gov.security.microsoft.us"
-        else:
-            return "https://api.security.microsoft.com/"
+            return "https://api.securitycenter.windows.com/"
 
     async def dump_machines(self) -> None:
         """
@@ -287,7 +280,7 @@ class MDEDataDumper(DataDumper):
         splits = full_query.split('|where Timestamp')
         result = None
         err = None
-        url = self.get_url() + path
+        url = self.mde_url + path
         try:
             async with self.ahsession.request("POST", url=url, headers=header, data=data) as r:
                 result = await r.json()

@@ -35,7 +35,7 @@ utc = pytz.UTC
 class AzureDataDumper(DataDumper):
 
     def __init__(self, output_dir, reports_dir, session, app_auth, config, auth_un_pw, loganalytics_app_auth, debug):
-        super().__init__(f'{output_dir}{os.path.sep}azure', reports_dir, None, app_auth, session, debug)
+        super().__init__(f'{output_dir}{os.path.sep}azure', reports_dir, app_auth, session, debug)
         self.logger = setup_logger(__name__, debug)
         self.failurefile = os.path.join(reports_dir, '_no_results.json')
         self.loganalytics_app_auth = loganalytics_app_auth
@@ -52,7 +52,10 @@ class AzureDataDumper(DataDumper):
              self.app_id = input("Please type your application client id: ")
              self.client_secret = getpass.getpass("Please type your client secret: ")
         self.tenant = config['config']['tenant']
-        self.us_gov = config['config']['us_government']
+        self.us_gov = config['config']['gcc_high']
+        gcc = config['config']['gcc'].lower() == "true"
+        gcc_high = config['config']['gcc_high'].lower() == "true"
+        self.endpoints = get_endpoints(gcc=gcc,gcc_high=gcc_high)
         if self.us_gov.lower() == "true":
             self.authority = AzureAuthorityHosts.AZURE_GOVERNMENT
         else:
@@ -846,12 +849,16 @@ class AzureDataDumper(DataDumper):
 
         tasks = []
         for subscriptionId in self.subscription_id_list:
-            url = f"https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.OperationalInsights/"
+            url = f"{self.endpoints['resource_manager']}/subscriptions/{subscriptionId}/providers/Microsoft.OperationalInsights/"
+            self.logger.debug(url)
             output_dir = os.path.join(self.output_dir, os.path.join(subscriptionId, "log_analytics_workspace"))
             check_output_dir(output_dir, self.logger)
             call_object = [url, self.app_auth, self.logger, output_dir, self.get_session()]
             await helper_single_object("workspaces?api-version=2023-09-01", call_object, self.failurefile)
             workspaces_file = os.path.join(output_dir, "workspaces.json")
+            if not os.path.isfile(workspaces_file):
+                self.logger.debug("No workspaces exist")
+                return
             with open(workspaces_file, "r") as f:
                 for line in f:
                     #self.logger.debug(json.dumps(json.loads(line), indent=2))
@@ -859,7 +866,7 @@ class AzureDataDumper(DataDumper):
                     workspace_name = workspace_dict["name"]
                     workspace_id = workspace_dict["id"]
                     self.logger.debug(f"summarizing {workspace_name}")
-                    url = f"https://api.loganalytics.io/v1{workspace_id}/query"
+                    url = f"{self.endpoints['log_analytics_api']}/v1{workspace_id}/query"
                     results, err, _, _ = await run_kql_query("search \"*\"", start, end, None, url, self.loganalytics_app_auth, self.logger, self.ahsession, summarize=True)
                     #self.logger.debug(json.dumps(results, indent=2, default=str))
                     for row in results:
@@ -1007,7 +1014,7 @@ class AzureDataDumper(DataDumper):
                         self.logger.debug(save_state_path)
                         save_state_set = set(json.load(open(save_state_path, "r"))["set"])
                     if self.us_gov.lower() == "true":
-                        url = "https://" + account + "blob.core.usgovcloudapi.net/"
+                        url = "https://" + account + ".blob.core.usgovcloudapi.net/"
                         blob_service_client = BlobServiceClient(account_url=url, credential=self.credential)
                     else:
                         url = "https://" + account + ".blob.core.windows.net/"

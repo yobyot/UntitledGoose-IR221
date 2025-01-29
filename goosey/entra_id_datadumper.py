@@ -16,12 +16,14 @@ from goosey.utils import *
 
 class EntraIdDataDumper(DataDumper):
 
-    def __init__(self, output_dir, reports_dir, auth, app_auth, session, config, debug):
-        super().__init__(f'{output_dir}{os.path.sep}entraid', reports_dir, auth, app_auth, session, debug)
+    def __init__(self, output_dir, reports_dir, app_auth, session, config, debug):
+        super().__init__(f'{output_dir}{os.path.sep}entraid', reports_dir, app_auth, session, debug)
         self.logger = setup_logger(__name__, debug)
         self.THRESHOLD = 300
-        self.us_government = config_get(config, 'config', 'us_government', self.logger).lower()
-        self.exo_us_government = config_get(config, 'config', 'exo_us_government', self.logger).lower()
+        self.gcc = config_get(config, 'config', 'gcc', self.logger).lower() == "true"
+        self.gcc_high = config_get(config, 'config', 'gcc_high', self.logger).lower() == "true"
+        endpoints = get_endpoints(gcc=self.gcc, gcc_high=self.gcc_high)
+        self.graph_url = endpoints["graph_api"]
         self.failurefile = os.path.join(reports_dir, '_no_results.json')
         filters = config_get(config, 'filters', 'date_start', logger=self.logger)
         if  filters!= '' and filters is not None:
@@ -121,10 +123,7 @@ class EntraIdDataDumper(DataDumper):
                 '$filter': filters,
                 'source': source
             }
-            if self.us_government == 'false':
-                url = 'https://graph.microsoft.com/beta/auditLogs/signIns'
-            elif self.us_government == 'true':
-                url = 'https://graph.microsoft.us/beta/auditLogs/signIns'
+            url = self.graph_url + "/beta/auditLogs/signIns"
             retries = 5
             for counter in range (retries):
                 try:
@@ -191,11 +190,7 @@ class EntraIdDataDumper(DataDumper):
         sub_dir = os.path.join(self.output_dir, 'entraid_audit_logs')
         check_output_dir(sub_dir, self.logger)
 
-        if self.us_government == 'false':
-            url = 'https://graph.microsoft.com/beta/auditLogs/directoryAudits'
-        elif self.us_government == 'true':
-            url = 'https://graph.microsoft.us/beta/auditLogs/directoryAudits'
-
+        url = self.graph_url + "/beta/auditLogs/directoryAudits"
 
         start_default = '%sT00:00:00.000000Z' % ((datetime.now() - timedelta(days=29)).strftime("%Y-%m-%d"))
         end_date_default = '%sT00:00:00.000000Z' % (datetime.now().strftime("%Y-%m-%d"))
@@ -316,10 +311,7 @@ class EntraIdDataDumper(DataDumper):
         if check_app_auth_token(self.app_auth, self.logger):
             return
 
-        if self.us_government == 'false':
-            url = 'https://graph.microsoft.com/beta/auditLogs/provisioning'
-        elif self.us_government == 'true':
-            url = 'https://graph.microsoft.us/beta/auditLogs/provisioning'
+        url = self.graph_url + "/beta/auditLogs/provisioning"
 
         self.logger.info('Getting Entra ID provisioning logs...')
         outfile = os.path.join(self.output_dir, 'entraidprovisioninglogs.json')
@@ -349,10 +341,7 @@ class EntraIdDataDumper(DataDumper):
         self.logger.info('Finished dumping Entra ID provisioning logs.')
 
     def get_url(self):
-        if self.us_government == "false":
-            return "https://graph.microsoft.com/beta/"
-        elif self.us_government == "true":
-            return "https://graph.microsoft.us/beta/"
+        return self.graph_url + "/beta/"
 
     async def helper_multiple_object(self, parent, child, output_dir, identifier='id', caller=""):
         url_parent = self.get_url()

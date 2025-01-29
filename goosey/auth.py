@@ -29,7 +29,6 @@ class Authentication():
     Authentication class for Untitled Goose Tool
     """
     def __init__(self, debug=False):
-        self.resource_uri = 'https://graph.microsoft.com/.default'
         self.tokendata = {}
         self.logger = None
         self.d4iot = False
@@ -40,14 +39,11 @@ class Authentication():
         Returns the authority URL for the commercial or government tenant specified,
         or the common one if no tenant was specified.
         """
-        if self.us_government == 'false':
-            if self.tenant is not None:
-                return 'https://login.microsoftonline.com/{}'.format(self.tenant)
-            return 'https://login.microsoftonline.com/common'
-        else:
-            if self.tenant is not None:
-                return 'https://login.microsoftonline.us/{}'.format(self.tenant)
-            return 'https://login.microsoftonline.us/common'
+        endpoint = self.endpoints_dict["authority_api"]
+        tenant = "common"
+        if self.tenant:
+            tenant = self.tenant
+        return f'{endpoint}/{tenant}'
 
     def get_d4iot_sensor_uri(self):
         """
@@ -55,31 +51,16 @@ class Authentication():
         """
         return "https://" + self.d4iot_sensor_ip
 
-    def get_mfa_resource_uri(self):
-        """
-        Returns the MFA Graph API resource URI for a commercial or government tenant.
-        """
-        if self.us_government == 'false':
-            return ['https://graph.microsoft.com/.default']
-        elif self.us_government == 'true':
-            return ['https://graph.microsoft.us/.default']
-
     def get_app_resource_uri(self):
         """
         Returns the application resource URI for a commercial or government tenant.
         """
-        if self.us_government == 'false':
-            if self.mde_gcc == 'false' and self.mde_gcc_high == 'false':
-                return ['https://graph.microsoft.com/.default', 'https://outlook.office365.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://management.azure.com/.default', 'https://api.security.microsoft.com/.default', 'https://api.loganalytics.io/.default']
-            elif self.mde_gcc == 'true':
-                return ['https://graph.microsoft.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://api-gcc.securitycenter.microsoft.us', 'https://api-gcc.security.microsoft.us']
-            elif self.mde_gcc_high == 'true':
-                return ['https://graph.microsoft.com/.default', 'https://api.securitycenter.microsoft.com/.default', 'https://api-gov.securitycenter.microsoft.us', 'https://api-gov.security.microsoft.us']
-        elif self.us_government == 'true':
-            if self.mde_gcc == 'true':
-                return ['https://graph.microsoft.us/.default', 'https://management.azure.us/.default', 'https://api-gcc.securitycenter.microsoft.us', 'https://api-gcc.security.microsoft.us']
-            elif self.mde_gcc_high =='true':
-                return ['https://graph.microsoft.us/.default', 'https://management.azure.us/.default', 'https://api-gov.securitycenter.microsoft.us', 'https://api-gov.security.microsoft.us']
+        app_resource_uris = {}
+        for key in self.endpoints_dict.keys():
+            if key in ["blob_api", "authority_api"]:
+                continue
+            app_resource_uris[key] = self.endpoints_dict[key] + "/.default"
+        return app_resource_uris
 
     def authenticate_as_app(self, resource_uri):
         """
@@ -106,15 +87,10 @@ class Authentication():
         config.read(configfile)
         if not self.d4iot:
             self.tenant = config_get(config, 'config', 'tenant', self.logger)
-            self.us_government = config_get(config, 'config', 'us_government', self.logger).lower()
-            self.mde_gcc = config_get(config, 'config', 'mde_gcc', self.logger).lower()
-            self.mde_gcc_high = config_get(config, 'config', 'mde_gcc_high', self.logger).lower()
-            self.exo_us_government = config_get(config, 'config', 'exo_us_government', self.logger).lower()
+            self.gcc = config_get(config, 'config', 'gcc', self.logger).lower == "true"
+            self.gcc_high = config_get(config, 'config', 'gcc_high', self.logger).lower() == "true"
             self.subscriptions = config_get(config, 'config', 'subscriptionid', self.logger)
-
-            if self.us_government == '' or self.mde_gcc == '' or self.mde_gcc_high == '' or self.tenant == '' or self.exo_us_government == '' or self.subscriptions == '':
-                self.logger.error("Empty contents within .conf file. Please edit and try again.")
-                sys.exit(1)
+            self.endpoints_dict = get_endpoints(gcc=self.gcc, gcc_high=self.gcc_high)
         else:
             self.d4iot_sensor_ip = config_get(config, 'config', 'd4iot_sensor_ip', self.logger)
             self.d4iot_mgmt_ip = config_get(config, 'config', 'd4iot_mgmt_ip', self.logger)
@@ -237,20 +213,8 @@ class Authentication():
         custom_auth_dict['sdk_auth']['client_secret'] = self.client_secret
         custom_auth_dict['sdk_auth']['subscriptionid'] = self.subscriptions
 
-        uri = str(self.get_mfa_resource_uri())
-
-        if self.tokendata:
-            custom_auth_dict['mfa'][uri] = copy.copy(self.tokendata)
-            custom_auth_dict['mfa'][uri]['tenantId'] = self.tenant
-            if 'expiresOn' in custom_auth_dict['mfa'][uri]:
-                expiretime = time.mktime(time.strptime(custom_auth_dict['mfa'][uri]['expiresOn'].split('.')[0], '%Y-%m-%d %H:%M:%S'))
-                custom_auth_dict['mfa'][uri]['expireTime'] = expiretime
-
-            # Clear out our token data
-            self.tokendata = None
-
         resource_uri = self.get_app_resource_uri()
-        for uri in resource_uri:
+        for key, uri in resource_uri.items():
             try:
                 if self.client_secret and self.app_client_id:
                     self.authenticate_as_app(uri)
@@ -258,11 +222,11 @@ class Authentication():
                 self.logger.error(f"Error authenticating as app: {str(e)}")
 
             if self.tokendata:
-                custom_auth_dict['app_auth'][uri] = copy.copy(self.tokendata)
-                custom_auth_dict['app_auth'][uri]['tenantId'] = self.tenant
-                if 'expiresOn' in custom_auth_dict['app_auth'][uri]:
-                    expiretime = time.mktime(time.strptime(custom_auth_dict['app_auth'][uri]['expiresOn'].split('.')[0], '%Y-%m-%d %H:%M:%S'))
-                    custom_auth_dict['app_auth'][uri]['expireTime'] = expiretime
+                custom_auth_dict['app_auth'][key] = copy.copy(self.tokendata)
+                custom_auth_dict['app_auth'][key]['tenantId'] = self.tenant
+                if 'expiresOn' in custom_auth_dict['app_auth'][key]:
+                    expiretime = time.mktime(time.strptime(custom_auth_dict['app_auth'][key]['expiresOn'].split('.')[0], '%Y-%m-%d %H:%M:%S'))
+                    custom_auth_dict['app_auth'][key]['expireTime'] = expiretime
         self._write_current_tokens(self.authfile, custom_auth_dict)
 
     def parse_args(self, args):

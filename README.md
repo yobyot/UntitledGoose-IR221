@@ -185,7 +185,7 @@ $ goosey conf
 A version of this command will be generated when the powershell installation script is run to create/setup the service principal. Below is an example with fake parameter values
 
 ```sh
-$ goosey conf --config_tenant=5fd146ad-8b31-4afa-a72f-6f71df5c7173 --config_subscriptionid=all --auth_appid=24fd6377-79e0-445d-838b-3eaa60d3ca21 --auth_clientsecret=9gh8Q~U7Sd.TRNad5Qpd_GL_UM1slEPJTOLyGt-_ 
+$ goosey conf --config_tenant=5fd146ad-8b31-4afa-a72f-6f71df5c7173 --config_subscriptionid=all --auth_appid=24fd6377-79e0-445d-838b-3eaa60d3ca21 
 ```
 
 After this, `.auth`, `.conf`, `.auth_d4iot`, and `.d4iot_conf` files should be placed in your current directory. These files are used by Untitled Goose Tool. Unless this was generated with the above parameters, you should fill out the top section `[auth]` so that Untitled Goose Tool can properly auth to the appropriate resources. However, if you do not feel comfortable about entering your credentials into a file, you can opt to delete the `.auth` and/or `.auth_d4iot` and be prompted by the tool for credentials via console instead.

@@ -12,9 +12,9 @@ requirements_filepath = path.join(path.dirname(path.abspath(__file__)), "require
 requirements = open(requirements_filepath).read().split()
 
 setup(name='goosey',
-      version='2.0.3',
+      version='2.0.4',
       description='EntraID, Azure, M365, MDE Data Collector',
-      author='Claire Casalnova, Jordan Eberst, Nicholas Kantor, Wellington Lee, Victoria Wallace',
+      author='Claire Casalnova, Jordan Eberst, Nicholas Kantor, Wellington Lee, John Phelps, Victoria Wallace',
       classifiers=[
           'Intended Audience :: Information Technology',
           'Programming Language :: Python :: 3.9',

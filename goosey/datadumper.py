@@ -4,11 +4,10 @@
 from goosey.utils import *
 
 class DataDumper(object):
-    def __init__(self, output_dir: str, reports_dir: str, auth: dict, app_auth: dict, session, debug):
+    def __init__(self, output_dir: str, reports_dir: str, app_auth: dict, session, debug):
         self.output_dir = output_dir
         self.reports_dir = reports_dir
         self.ahsession = session
-        self.auth = auth
         self.app_auth = app_auth
         self.logger = setup_logger(__name__, debug)
 
