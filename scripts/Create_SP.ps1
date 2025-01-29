@@ -17,7 +17,8 @@
 	,[switch] $Create=$False # Boolean flag on whether to create. Will prompt if not defined. If both Create and Delete are defined then will prompt
 	,[switch] $Delete=$False # Boolean flag on whether to delete. Will prompt if not defined. If both Create and Delete are defined then will prompt
 	,[switch] $Force=$False # Boolean flag on whether to Force deletion or creation without prompting
-	,[switch] $CloudShell=$False # Boolean if you are running in cloudshell or somewhere else you need to perform DeviceLogins
+	,[switch] $NoSubscriptions=$False # Boolean flag on whether to not apply subscription level roles
+	,[switch] $GccHigh=$False # Boolean flag on whether to set it up for a Gcc High Environment
 )
 
 $script:UserNames = @()
@@ -92,34 +93,32 @@ $exchange_roles = @(
 	"User Options"
 )
 
+Function Install-Single-Module {
+	param(
+        [string] $ModuleName,
+		[string] $Version
+    )
+	# Download the module if it doesn't exist
+	If (-not (Get-Module -Name $ModuleName -ListAvailable)) {
+		Write-Host "Installing $ModuleName from default repository"
+		Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber
+	}
+	# Import it if not currently installed
+	If ($null -eq (Get-InstalledModule $ModuleName -RequiredVersion $Version)) {
+		Write-Host "Importing $ModuleName"
+		Import-Module -Name $ModuleNAme -RequiredVersion $AzVersion -Force
+	}
+}
+
 # Install the required modules if not already installed
 Function Install-Modules {
 	Write-Host "Starting package installation. This part can take a few minutes"
-	$GraphVersion = 2.15.0
-	$AzVersion = 6.16.0
-	If ((-not (Get-Module -Name Az.Resources -ListAvailable)) -or ($null -eq (Get-InstalledModule Az.Resources -RequiredVersion $AzVersion))) {
-		Write-Host "Installing Az from default repository"
-		Install-Module -Name Az.Resources -RequiredVersion $AzVersion -Force -AllowClobber
-	}
-	Write-Host "Importing Az"
-	Import-Module -Name Az.Resources -RequiredVersion $AzVersion -Force
-	If ((-not (Get-Module -Name Microsoft.Graph.Applications -ListAvailable)) -or ($null -eq (Get-InstalledModule Microsoft.Graph.Applications -RequiredVersion $GraphVersion))) {
-		Write-Host "Installing Microsoft.Graph from default repository"
-		Install-Module -Name Microsoft.Graph.Applications -RequiredVersion $GraphVersion -Force
-	}
-	Write-Host "Importing Microsoft.Graph"
-	Import-Module -Name Microsoft.Graph.Applications -RequiredVersion $GraphVersion -Force
-	If (-not (Get-Module -Name ExchangeOnlineManagement -ListAvailable)) {
-        Write-Host "Required module, ExchangeOnlineManagement, is not installed on the system."
-        Write-Host "Installing ExchangeOnlineManagement from default repository"
-        Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.1.0  -Force -AllowClobber
-    } ElseIf ($null -eq (Get-InstalledModule ExchangeOnlineManagement -RequiredVersion 3.1.0)) {
-        Write-Host "Incorrect version of ExchangeOnlineManagement module is installed on the system."
-        Write-Host "Installing ExchangeOnlineManagement from default repository"
-        Install-Module -Name ExchangeOnlineManagement -RequiredVersion 3.1.0 -Force -AllowClobber
-    }
-    Write-Host "Importing ExchangeOnlineManagement"
-    Import-Module -Name ExchangeOnlineManagement -RequiredVersion 3.1.0 -Force
+	$GraphVersion = 2.25.0
+	$AzVersion = 7.8.0
+	$ExchangeOnlineVersion = 3.7.0
+	Install-Single-Module -ModuleName "Az.Resources" -Version $AzVersion
+	Install-Single-Module -ModuleName "Microsoft.Graph.Applications" -Version $GraphVersion
+	Install-Single-Module -ModuleName "ExchangeOnlineManagement" -Version $ExchangeOnlineVersion
 }
 
 Function Delete-GooseApp {
@@ -313,11 +312,15 @@ Function Create-ExchangeServicePrincipal {
 Function Choose-Subscriptions {
 	param(
 		[bool] $Force=$false
+		,[bool] $NoSubscriptions=$false
 	)
 	$Subscriptions = Get-AzSubscription
 	$SubscriptionIds = @()
 	$AllSubscriptions = $true
 	$SubscriptionsUsed = ""
+	if ($NoSubscriptions) {
+		return $SubscriptionsUsed
+	}
 	foreach ($Subscription in $Subscriptions) {
 		$SubscriptionName = ($Subscription | Select-Object -ExpandProperty Name)
 		If ($Force -eq $true) {
@@ -357,7 +360,12 @@ Function Output-Results {
 
 	# Make sure this part contrasts
 	Write-Host -ForegroundColor Green -BackgroundColor Black "Use the below output to generate the UGT configuration"
-	Write-Host -ForegroundColor DarkGreen -BackgroundColor Black "goosey conf --config_tenant=$TenantId --config_subscriptionid=$SubscriptionIds --auth_appid=$AppId --auth_clientsecret=$ClientSecret"
+
+	Write-Host -ForegroundColor DarkGreen -BackgroundColor Black "goosey conf --config_tenant=$TenantId --config_subscriptionid=$SubscriptionIds --auth_appid=$AppId"
+
+	Write-Host -ForegroundColor Green -BackgroundColor Black "Enter the below client secret when prompted during the goosey conf command"
+
+	Write-Host -ForegroundColor DarkGreen -BackgroundColor Black "Client Secret: $ClientSecret"
 }
 
 if (-not $AppName) {
@@ -372,16 +380,26 @@ if (($Create -eq $false -and $Delete -eq $false) -or ($Create -eq $true -and $De
 }
 
 Install-Modules
-Connect-MgGraph -Scope 'Application.ReadWrite.All,AppRoleAssignment.ReadWrite.All,Directory.ReadWrite.All' -NoWelcome
-Connect-ExchangeOnline -ShowBanner:$false
-if ($CloudShell) {
-	Connect-AzAccount -UseDeviceAuthentication
+
+$AzEnvironment = "AzureCloud"
+$GraphEnvironment = "Global"
+$ExchangeEnvironment = "O365Default"
+if ($GccHigh) {
+	$AzEnvironment = "AzureUSGovernment"
+	$GraphEnvironment = "USGov"
+	$ExchangeEnvironment = "O365USGovGCCHigh"
 }
-else {
-	Connect-AzAccount
+
+Connect-AzAccount -WarningVariable ConnectAzOutput -Environment $AzEnvironment
+Write-Host $ConnectAzOutput
+if ($ConnectAzOutput -Match "Interactive authentication is not supported") {
+	Write-Host "here"
+	Connect-AzAccount -UseDeviceAuthentication -Environment $AzEnvironment
 }
+Connect-MgGraph -Scope 'Application.ReadWrite.All,AppRoleAssignment.ReadWrite.All,Directory.ReadWrite.All' -NoWelcome -Environment $GraphEnvironment
+Connect-ExchangeOnline -ShowBanner:$false -ExchangeEnvironmentName $ExchangeEnvironment
 If ($Create) {
-	$SubscriptionsUsed = Choose-Subscriptions -Force $Force
+	$SubscriptionsUsed = Choose-Subscriptions -Force $Force -NoSubscriptions $NoSubscriptions
 	$AppId, $ObjectId = Create-GooseApp -AppName $AppName -SubscriptionsUsed $SubscriptionsUsed
 	Create-ExchangeServicePrincipal -AppId $AppId -AppName $AppName -ObjectId $ObjectId
 

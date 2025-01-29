@@ -50,29 +50,17 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
 
     session = aiohttp.ClientSession(trust_env=True)
 
-    msft_graph_auth = {}
     msft_graph_app_auth = {}
     loganalytics_app_auth = {}
 
-    for key in auth['mfa']:
-        if 'graph.microsoft.com' in key or 'graph.microsoft.us' in key:
-            msft_graph_auth = auth['mfa'][key]
+    o365_app_auth = auth["app_auth"]["outlook_office_api"]
+    msft_graph_app_auth = auth["app_auth"]["graph_api"]
+    mgmt_app_auth = auth["app_auth"]["resource_manager"]
+    msft_security_center_auth = auth["app_auth"]["securitycenter_api"]
+    loganalytics_app_auth = auth["app_auth"]["log_analytics_api"]
+    msft_security_auth = auth["app_auth"]["security_api"]
 
-    for key in auth['app_auth']:
-        if 'graph.microsoft.com' in key or 'graph.microsoft.us' in key:
-            msft_graph_app_auth = auth['app_auth'][key]
-        if 'management.azure.com' in key or 'management.azure.us' in key:
-            mgmt_app_auth = auth['app_auth'][key]
-        if 'api.securitycenter.microsoft.com' in key or 'api-gcc.securitycenter.microsoft.us' in key or 'api-gov.securitycenter.microsoft.us' in key:
-            msft_security_center_auth = auth['app_auth'][key]
-        if 'api.security.microsoft.com' in key or 'api-gcc.security.microsoft.us' in key or 'api-gov.security.microsoft.us' in key:
-            msft_security_auth = auth['app_auth'][key]
-        if 'outlook.office365.com' in key or 'outlook.office365.us' in key:
-            o365_app_auth = auth['app_auth'][key]
-        if 'api.loganalytics.io' in key:
-            loganalytics_app_auth = auth['app_auth'][key]
-
-    maindumper = DataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_graph_app_auth, session, args.debug)
+    maindumper = DataDumper(args.output_dir, args.reports_dir, msft_graph_app_auth, session, args.debug)
 
     m365, entraid, azure, mde = False, False, False, False
 
@@ -84,16 +72,16 @@ async def run(args, config, auth, init_sections, auth_un_pw=None):
 
     else:
         if 'm365' in init_sections:
-            m365dumper = M365DataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_graph_app_auth, maindumper.ahsession, config, args.debug, o365_app_auth)
+            m365dumper = M365DataDumper(args.output_dir, args.reports_dir, msft_graph_app_auth, maindumper.ahsession, config, args.debug, o365_app_auth)
             m365 = True
         if 'entraid' in init_sections:
-            entraiddumper = EntraIdDataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_graph_app_auth, maindumper.ahsession, config, args.debug)
+            entraiddumper = EntraIdDataDumper(args.output_dir, args.reports_dir, msft_graph_app_auth, maindumper.ahsession, config, args.debug)
             entraid = True
         if 'azure' in init_sections:
             azure_dumper = AzureDataDumper(args.output_dir, args.reports_dir, maindumper.ahsession, mgmt_app_auth, config, auth_un_pw, loganalytics_app_auth, args.debug)
             azure = True
         if 'mde' in init_sections:
-            mdedumper = MDEDataDumper(args.output_dir, args.reports_dir, msft_graph_auth, msft_security_center_auth, msft_security_auth, maindumper.ahsession, config, args.debug)
+            mdedumper = MDEDataDumper(args.output_dir, args.reports_dir, msft_security_center_auth, msft_security_auth, maindumper.ahsession, config, args.debug)
             mde = True
 
     async with maindumper.ahsession as ahsession:

@@ -25,10 +25,12 @@ from io import StringIO
 
 class M365DataDumper(DataDumper):
 
-    def __init__(self, output_dir, reports_dir, auth, app_auth, session, config, debug, o365_app_auth):
-        super().__init__(f'{output_dir}{os.path.sep}m365', reports_dir, auth, app_auth, session, debug)
+    def __init__(self, output_dir, reports_dir, app_auth, session, config, debug, o365_app_auth):
+        super().__init__(f'{output_dir}{os.path.sep}m365', reports_dir, app_auth, session, debug)
         self.logger = setup_logger(__name__, debug)
-        self.exo_us_government = config_get(config, 'config', 'exo_us_government', self.logger).lower()
+        self.gcc = config_get(config, 'config', 'gcc', self.logger).lower() == "true"
+        self.gcc_high = config_get(config, 'config', 'gcc_high', self.logger).lower() == "true"
+        self.endpoints = get_endpoints(gcc=self.gcc, gcc_high=self.gcc_high)
         self.inboxfailfile = os.path.join(reports_dir, '_user_inbox_503.json')
         self.failurefile = os.path.join(reports_dir, '_no_results.json')
         self.ual_bounds_state = []
@@ -51,7 +53,7 @@ class M365DataDumper(DataDumper):
         else:
             self.date_range=False
 
-        self.call_object = [self.get_url(), self.app_auth, self.logger, self.output_dir, self.get_session()]
+        self.call_object = [self.endpoints["graph_api"] + "/beta/", self.app_auth, self.logger, self.output_dir, self.get_session()]
 
     async def run_exo_cmdlet(self, cmdlet, Parameters={}, timeout=120):
         """
@@ -79,8 +81,7 @@ class M365DataDumper(DataDumper):
         result = None
         err = None
         # https://learn.microsoft.com/en-us/powershell/module/exchange
-        url = "https://outlook.office.com/adminapi/beta/{tenant_id}/InvokeCommand"
-        url = url.format(tenant_id=self.tenantId)
+        url = f"{self.endpoints['outlook_office_api']}/adminapi/beta/{self.tenantId}/InvokeCommand"
         self.logger.debug(raw_payload)
 
         try:
@@ -335,10 +336,7 @@ class M365DataDumper(DataDumper):
                     if "'" in listOfIds[i]:
                         listOfIds[i] = listOfIds[i].replace("'", "%27")
                         self.logger.debug('Converted userprincipal: {}'.format(str(listOfIds[i])))
-                    if self.exo_us_government == 'false':
-                        url = 'https://graph.microsoft.com/beta/users/' + listOfIds[i] + '/mailFolders/inbox/messageRules'
-                    elif self.exo_us_government == 'true':
-                        url = 'https://graph.microsoft.us/beta/users/' + listOfIds[i] + '/mailFolders/inbox/messageRules'
+                    url = self.endpoints['graph_api'] + '/beta/users/' + listOfIds[i] + '/mailFolders/inbox/messageRules'
                     header = {'Authorization': '%s %s' % (self.app_auth['token_type'], self.app_auth['access_token'])}
                     additionalInfo = {"userPrincipalName": listOfIds[i]}
                     async with self.ahsession.request("GET", url, headers=header, raise_for_status=True) as r:
@@ -375,12 +373,6 @@ class M365DataDumper(DataDumper):
                         self.logger.info('Unauthorized message received. Exiting calls.')
                         sys.exit("Check auth to make sure it's not expired.")
         self.logger.info('Finished dumping inbox rules.')
-
-    def get_url(self):
-        if self.exo_us_government == "false":
-            return "https://graph.microsoft.com/beta/"
-        elif self.exo_us_government == "true":
-            return "https://graph.microsoft.us/beta/"
 
     def _insert_ual_record(self, record, boundsfile=None):
         """

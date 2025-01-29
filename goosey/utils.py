@@ -129,9 +129,41 @@ def setup_logger(name, debug, formatter='cli') -> None:
 
     return logger
 
+logger = setup_logger(__name__, debug=False)
+
 class obj(object):
     def __init__(self, dict_):
         self.__dict__.update(dict_)
+
+def get_endpoints(gcc=False, gcc_high=False):
+    """
+    Return a dictionary of urls for authentication and log pulling based on the tenant type
+    """
+    urls_dict = {}
+    # default endpoints
+    urls_dict["outlook_office_api"] = "https://outlook.office.com"
+    urls_dict["graph_api"] = "https://graph.microsoft.com"
+    urls_dict["blob_api"] = "blob.core.windows.net"
+    urls_dict["resource_manager"] = "https://management.azure.com"
+    urls_dict["log_analytics_api"] = "https://api.loganalytics.io"
+    urls_dict["securitycenter_api"] = "https://api.securitycenter.windows.com"
+    urls_dict["security_api"] = "https://api.security.microsoft.com"
+    urls_dict["authority_api"] = "https://login.microsoftonline.com"
+    # If using a gcc tenant
+    if gcc:
+        urls_dict["securitycenter_api"] = "https://api-gcc.securitycenter.microsoft.us"
+        urls_dict["security_api"] = "https://api-gcc.security.microsoft.us"
+    # If using a gcc high tenant
+    elif gcc_high:
+        urls_dict["outlook_office_api"] = "https://outlook.office365.us"
+        urls_dict["graph_api"] = "https://graph.microsoft.us"
+        urls_dict["blob_api"] = "blob.core.usgovcloudapi.net"
+        urls_dict["resource_manager"] = "https://management.usgovcloudapi.net"
+        urls_dict["log_analytics_api"] = "https://api.loganalytics.us"
+        urls_dict["securitycenter_api"] = "https://api-gov.securitycenter.microsoft.us"
+        urls_dict["security_api"] = "https://api-gov.security.microsoft.us"
+        urls_dict["authority_api"] = "https://login.microsoftonline.us"
+    return urls_dict
 
 def dict2obj(d):
     return json.loads(json.dumps(d), object_hook=obj)
@@ -296,7 +328,7 @@ async def run_kql_query(query, start, end, bounds, url, app_auth, logger, sessio
     # errors from the query that will cause the dumper to sleep
     sleep_errors = ["Server disconnected", "Cannot connect", "WinError 10054"]
     # errors from the query that will cause the dumper to cut the tim in half
-    slice_errors = ['exceeded the allowed limits', 'exceeded the allowed result size']
+    slice_errors = ['exceeded the allowed limits', 'exceeded the allowed result size', 'Rate limit']
     # Errors in the authentication token
     auth_errors = ['TokenExpired']
 
