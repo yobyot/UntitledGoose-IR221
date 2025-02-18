@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - Enter the honk - 2024-02-18
+### Added
+- Added support for python3.13
+
 ## [2.0.4] - Enter the honk - 2024-01-28
 ### Changed
 - Create_SP.ps1 script no longer prompts for cloudshell

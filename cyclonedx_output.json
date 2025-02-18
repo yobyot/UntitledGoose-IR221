@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:4c086e7a-0919-4c2d-8a22-45c2dc982c23",
+  "serialNumber": "urn:uuid:897da9d0-55da-4802-9101-100cd64b1b0c",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-01-29T13:07:28-05:00",
+    "timestamp": "2025-02-18T11:02:35-05:00",
     "tools": [
       {
         "vendor": "anchore",
@@ -3831,12 +3831,12 @@
       ]
     },
     {
-      "bom-ref": "pkg:pypi/fire@0.6.0?package-id=a3d813347f24f3b3",
+      "bom-ref": "pkg:pypi/fire@0.7.0?package-id=24446619b8f1cda0",
       "type": "library",
       "name": "fire",
-      "version": "0.6.0",
-      "cpe": "cpe:2.3:a:python-fire:python-fire:0.6.0:*:*:*:*:*:*:*",
-      "purl": "pkg:pypi/fire@0.6.0",
+      "version": "0.7.0",
+      "cpe": "cpe:2.3:a:python-fire:python-fire:0.7.0:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/fire@0.7.0",
       "properties": [
         {
           "name": "syft:package:foundBy",
@@ -3856,47 +3856,47 @@
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-fire:python_fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_fire:python-fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_fire:python-fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_fire:python_fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python-fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python-fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:python_fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:python_fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:fire:python-fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:fire:python-fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:fire:python_fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python-fire:fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python-fire:fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python_fire:fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python_fire:fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:python:fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:python:fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:cpe23",
-          "value": "cpe:2.3:a:fire:fire:0.6.0:*:*:*:*:*:*:*"
+          "value": "cpe:2.3:a:fire:fire:0.7.0:*:*:*:*:*:*:*"
         },
         {
           "name": "syft:location:0:path",
