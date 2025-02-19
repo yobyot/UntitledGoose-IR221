@@ -2,10 +2,10 @@
   "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.4",
-  "serialNumber": "urn:uuid:897da9d0-55da-4802-9101-100cd64b1b0c",
+  "serialNumber": "urn:uuid:62f15981-2265-4677-88b8-b0b6b070b94f",
   "version": 1,
   "metadata": {
-    "timestamp": "2025-02-18T11:02:35-05:00",
+    "timestamp": "2025-02-19T12:35:49-05:00",
     "tools": [
       {
         "vendor": "anchore",

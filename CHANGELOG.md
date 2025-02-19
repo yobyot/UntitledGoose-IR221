@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.1.0] - Enter the honk - 2024-02-18
+## [2.1.0] - Enter the honk - 2024-02-19
 ### Added
-- Added support for python3.13
+- Added support for python 3.13
 
 ## [2.0.4] - Enter the honk - 2024-01-28
 ### Changed
