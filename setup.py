@@ -5,8 +5,8 @@ from setuptools import setup
 
 if sys.version_info < (3,9):
     sys.exit("The current Python version is less than 3.9. Exiting.")
-elif sys.version_info >= (3,13):
-    sys.exit("The current Python version is greater than 3.12. Exiting.")
+elif sys.version_info >= (3,14):
+    sys.exit("The current Python version is greater than 3.13. Exiting.")
 
 requirements_filepath = path.join(path.dirname(path.abspath(__file__)), "requirements.txt")
 requirements = open(requirements_filepath).read().split()
@@ -21,6 +21,7 @@ setup(name='goosey',
           'Programming Language :: Python :: 3.10',
           'Programming Language :: Python :: 3.11',
           'Programming Language :: Python :: 3.12',
+          'Programming Language :: Python :: 3.13',
       ],
       packages=['goosey'],
       python_requires='>=3.9',

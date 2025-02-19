@@ -3,14 +3,14 @@
  "dataLicense": "CC0-1.0",
  "SPDXID": "SPDXRef-DOCUMENT",
  "name": "untitledgoosetool",
- "documentNamespace": "https://anchore.com/syft/dir/untitledgoosetool-fb8c7c16-ce25-4c7b-8938-5674155f7f3b",
+ "documentNamespace": "https://anchore.com/syft/dir/untitledgoosetool-b095ab3b-49e1-492f-91be-4b7a31ac7574",
  "creationInfo": {
   "licenseListVersion": "3.21",
   "creators": [
    "Organization: Anchore, Inc",
    "Tool: syft-0.90.0"
   ],
-  "created": "2025-01-29T18:07:28Z"
+  "created": "2025-02-19T17:35:48Z"
  },
  "packages": [
   {
@@ -4413,8 +4413,8 @@
   },
   {
    "name": "fire",
-   "SPDXID": "SPDXRef-Package-python-fire-a3d813347f24f3b3",
-   "versionInfo": "0.6.0",
+   "SPDXID": "SPDXRef-Package-python-fire-24446619b8f1cda0",
+   "versionInfo": "0.7.0",
    "supplier": "NOASSERTION",
    "downloadLocation": "NOASSERTION",
    "filesAnalyzed": false,
@@ -4426,67 +4426,67 @@
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-fire:python-fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-fire:python-fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-fire:python_fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_fire:python-fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_fire:python-fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_fire:python_fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python-fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python-fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:python_fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:python_fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:fire:python-fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:fire:python-fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:fire:python_fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:fire:python_fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python-fire:fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python-fire:fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python_fire:fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python_fire:fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:python:fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:python:fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "SECURITY",
      "referenceType": "cpe23Type",
-     "referenceLocator": "cpe:2.3:a:fire:fire:0.6.0:*:*:*:*:*:*:*"
+     "referenceLocator": "cpe:2.3:a:fire:fire:0.7.0:*:*:*:*:*:*:*"
     },
     {
      "referenceCategory": "PACKAGE-MANAGER",
      "referenceType": "purl",
-     "referenceLocator": "pkg:pypi/fire@0.6.0"
+     "referenceLocator": "pkg:pypi/fire@0.7.0"
     }
    ]
   },
@@ -8288,6 +8288,12 @@
    "comment": "evident-by: indicates the package's existence is evident by the given file"
   },
   {
+   "spdxElementId": "SPDXRef-Package-python-fire-24446619b8f1cda0",
+   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
+   "relationshipType": "OTHER",
+   "comment": "evident-by: indicates the package's existence is evident by the given file"
+  },
+  {
    "spdxElementId": "SPDXRef-Package-python-zipp-24caf9ae9b8c4214",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
@@ -8517,12 +8523,6 @@
   },
   {
    "spdxElementId": "SPDXRef-Package-python-jeepney-a1a4132527a97190",
-   "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
-   "relationshipType": "OTHER",
-   "comment": "evident-by: indicates the package's existence is evident by the given file"
-  },
-  {
-   "spdxElementId": "SPDXRef-Package-python-fire-a3d813347f24f3b3",
    "relatedSpdxElement": "SPDXRef-File-requirements.txt-26ca2b7dc025d550",
    "relationshipType": "OTHER",
    "comment": "evident-by: indicates the package's existence is evident by the given file"
@@ -8784,7 +8784,7 @@
   },
   {
    "spdxElementId": "SPDXRef-DocumentRoot-Directory-untitledgoosetool",
-   "relatedSpdxElement": "SPDXRef-Package-python-fire-a3d813347f24f3b3",
+   "relatedSpdxElement": "SPDXRef-Package-python-fire-24446619b8f1cda0",
    "relationshipType": "CONTAINS"
   },
   {
