@@ -17,3 +17,7 @@ error.log
 *.auth*
 *_auth*
 *.conf
+.DS_Store
+.vscode
+.gitignore
+
