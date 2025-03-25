@@ -20,4 +20,4 @@ error.log
 .DS_Store
 .vscode
 .gitignore
-
+*code-workspace
