@@ -94,20 +94,23 @@ $exchange_roles = @(
 )
 
 Function Install-Single-Module {
-	param(
+    param(
         [string] $ModuleName,
-		[string] $Version
+        [string] $Version
     )
-	# Download the module if it doesn't exist
-	If (-not (Get-Module -Name $ModuleName -ListAvailable)) {
-		Write-Host "Installing $ModuleName from default repository"
-		Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber -Scope CurrentUser
-	}
-	# Import it if not currently installed
-	If ($null -eq (Get-InstalledModule $ModuleName -RequiredVersion $Version)) {
-		Write-Host "Importing $ModuleName"
-		Import-Module -Name $ModuleNAme -RequiredVersion $Version -Force
-	}
+    # Check if the module with the specific version is installed
+    $module = Get-InstalledModule -Name $ModuleName -RequiredVersion $Version -ErrorAction SilentlyContinue
+    If (-not $module) {
+        Write-Host "Installing $ModuleName version $Version from default repository"
+        Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber -Scope CurrentUser
+    } else {
+        Write-Host "$ModuleName version $Version is already installed"
+    }
+    # Import it if not currently imported
+    If (-not (Get-Module -Name $ModuleName -ListAvailable | Where-Object { $_.Version -eq $Version })) {
+        Write-Host "Importing $ModuleName version $Version"
+        Import-Module -Name $ModuleName -RequiredVersion $Version -Force
+    }
 }
 
 # Install the required modules if not already installed
