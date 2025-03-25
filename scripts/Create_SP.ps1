@@ -14,11 +14,11 @@
 
 [cmdletbinding()]Param(
 	[string] $AppName # Display Name for the Application
-	,[switch] $Create=$False # Boolean flag on whether to create. Will prompt if not defined. If both Create and Delete are defined then will prompt
-	,[switch] $Delete=$False # Boolean flag on whether to delete. Will prompt if not defined. If both Create and Delete are defined then will prompt
-	,[switch] $Force=$False # Boolean flag on whether to Force deletion or creation without prompting
-	,[switch] $NoSubscriptions=$False # Boolean flag on whether to not apply subscription level roles
-	,[switch] $GccHigh=$False # Boolean flag on whether to set it up for a Gcc High Environment
+	, [switch] $Create = $False # Boolean flag on whether to create. Will prompt if not defined. If both Create and Delete are defined then will prompt
+	, [switch] $Delete = $False # Boolean flag on whether to delete. Will prompt if not defined. If both Create and Delete are defined then will prompt
+	, [switch] $Force = $False # Boolean flag on whether to Force deletion or creation without prompting
+	, [switch] $NoSubscriptions = $False # Boolean flag on whether to not apply subscription level roles
+	, [switch] $GccHigh = $False # Boolean flag on whether to set it up for a Gcc High Environment
 )
 
 $script:UserNames = @()
@@ -26,13 +26,13 @@ $script:UserSecrets = @()
 $script:OutputSubscriptionId = @()
 
 $permissions = @{
-	"Log Analytics API" = @(
+	"Log Analytics API"           = @(
 		"Data.Read"
 	)
 	"Microsoft Threat Protection" = @(
 		"AdvancedHunting.Read.All"
 	)
-	"WindowsDefenderATP" = @(
+	"WindowsDefenderATP"          = @(
 		"AdvancedQuery.Read.All",
 		"Alert.Read.All",
 		"Library.Manage",
@@ -42,10 +42,10 @@ $permissions = @{
 		"Ti.ReadWrite",
 		"Vulnerability.Read.All"
 	)
-	"Office 365 Exchange Online" = @(
+	"Office 365 Exchange Online"  = @(
 		"Exchange.ManageAsApp"
 	)
-	"Microsoft Graph" = @(
+	"Microsoft Graph"             = @(
 		"AdministrativeUnit.Read.All",
 		"APIConnectors.Read.All",
 		"AuditLog.Read.All",
@@ -94,31 +94,32 @@ $exchange_roles = @(
 )
 
 Function Install-Single-Module {
-    param(
-        [string] $ModuleName,
-        [string] $Version
-    )
-    # Check if the module with the specific version is installed
-    $module = Get-InstalledModule -Name $ModuleName -RequiredVersion $Version -ErrorAction SilentlyContinue
-    If (-not $module) {
-        Write-Host "Installing $ModuleName version $Version from default repository"
-        Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber -Scope CurrentUser
-    } else {
-        Write-Host "$ModuleName version $Version is already installed"
-    }
-    # Import it if not currently imported
-    If (-not (Get-Module -Name $ModuleName -ListAvailable | Where-Object { $_.Version -eq $Version })) {
-        Write-Host "Importing $ModuleName version $Version"
-        Import-Module -Name $ModuleName -RequiredVersion $Version -Force
-    }
+	param(
+		[string] $ModuleName,
+		[string] $Version
+	)
+	# Check if the module with the specific version is installed
+	$module = Get-InstalledModule -Name $ModuleName -RequiredVersion $Version -ErrorAction SilentlyContinue
+	If (-not $module) {
+		Write-Host "Installing $ModuleName version $Version from default repository"
+		Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber -Scope CurrentUser
+	}
+ else {
+		Write-Host "$ModuleName version $Version is already installed"
+	}
+	# Import it if not currently imported
+	If (-not (Get-Module -Name $ModuleName -ListAvailable | Where-Object { $_.Version -eq $Version })) {
+		Write-Host "Importing $ModuleName version $Version"
+		Import-Module -Name $ModuleName -RequiredVersion $Version -Force
+	}
 }
 
 # Install the required modules if not already installed
 Function Install-Modules {
 	Write-Host "Starting package installation. This part can take a few minutes"
-    $GraphVersion = "2.26.1"
-    $AzVersion = "7.9.0"
-    $ExchangeOnlineVersion = "3.6.0"
+	$GraphVersion = "2.26.1"
+	$AzVersion = "7.9.0"
+	$ExchangeOnlineVersion = "3.6.0"
 	Install-Single-Module -ModuleName "Az.Resources" -Version $AzVersion
 	Install-Single-Module -ModuleName "Microsoft.Graph.Applications" -Version $GraphVersion
 	Install-Single-Module -ModuleName "ExchangeOnlineManagement" -Version $ExchangeOnlineVersion
@@ -126,9 +127,9 @@ Function Install-Modules {
 
 Function Delete-GooseApp {
 	param(
-        [string] $AppName,
-		[bool] $Force=$false
-    )
+		[string] $AppName,
+		[bool] $Force = $false
+	)
 
 	# Query Microsoft Graph to find the service principal by display name
 	$ServicePrincipals = Get-MgServicePrincipal -Filter "displayName eq '$AppName'"
@@ -136,9 +137,9 @@ Function Delete-GooseApp {
 	
 	if ($Force -eq $false) {
 		$Delete = Read-Host "Are you sure you want to delete the application '$AppName'? Y/N"
-		Switch ($Create){
-			Y {$Delete = $true}
-			N {$Delete = $false}
+		Switch ($Create) {
+			Y { $Delete = $true }
+			N { $Delete = $false }
 		}
 		if ($Delete -eq $false) {
 			Write-Host "Stopping Deletion"
@@ -146,8 +147,7 @@ Function Delete-GooseApp {
 		}
 	}
 	If ($ServicePrincipals) {
-		foreach ($ServicePrincipal in $ServicePrincipals)
-		{
+		foreach ($ServicePrincipal in $ServicePrincipals) {
 			# Role assignments need to be removed. Otherwise will leave empty role assignments on the subscriptions
 			Write-Host "Removing Roles $app_roles"
 			$Subscriptions = Get-AzSubscription
@@ -164,28 +164,29 @@ Function Delete-GooseApp {
 			Remove-MgServicePrincipal -ServicePrincipalId $ServicePrincipal.Id
 			Write-Host "Service Principal '$AppName' Deleted"
 		}
-	} Else {
+	}
+ Else {
 		Write-Host "Service Principal with the name '$AppName' not found."
 	}
 	
 	$Applications = Get-MgApplication -Filter "displayName eq '$AppName'"
 	If ($Applications) {
-		foreach ($Application in $Applications)
-		{
+		foreach ($Application in $Applications) {
 			# Delete the Application
 			Remove-MgApplication -ApplicationId $Application.Id
 			Write-Host "Application '$AppName' Deleted"
 		}
-	} Else {
+	}
+ Else {
 		Write-Host "Application with the name '$AppName' not found."
 	}
 }
 
-Function Create-GooseApp{
+Function Create-GooseApp {
 	param(
-        [string] $AppName,
+		[string] $AppName,
 		[array] $SubscriptionsUsed
-    )
+	)
 
 	# Define the required permissions
 
@@ -227,8 +228,8 @@ Function Create-GooseApp{
 			Else {
 				$params = @{
 					principalId = $ServicePrincipalId
-					resourceId = $ResourceId
-					appRoleId = $AppRoleId
+					resourceId  = $ResourceId
+					appRoleId   = $AppRoleId
 				}
 				New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $ServicePrincipalId -BodyParameter $params
 				Write-Host "Permission $permission added to service principal"
@@ -257,9 +258,9 @@ Function Create-GooseApp{
 }
 Function Delete-ExchangeServicePrincipal {
 	param(
-        [string] $AppName,
-        [bool] $Force=$false
-    )
+		[string] $AppName,
+		[bool] $Force = $false
+	)
 	
 	# Get the AppId
 	$AppId = (Get-MgApplication -Filter "displayName eq '$AppName'").AppId
@@ -282,8 +283,8 @@ Function Delete-ExchangeServicePrincipal {
 
 Function Create-ExchangeServicePrincipal {
 	param(
-        [string] $AppName
-    )
+		[string] $AppName
+	)
 	# Create the Exchange Online group and add permissions needed
 	$RoleGroup = $false
 	$ServicePrincipal = $false
@@ -295,6 +296,7 @@ Function Create-ExchangeServicePrincipal {
 	# Get the Service Principal Id
 	$ObjectId = (Get-MgServicePrincipal -Filter "displayName eq '$AppName'").Id
 
+	
 	$RoleGroup = Get-RoleGroup $AppName
 	if (-not $RoleGroup) {
 		$RoleGroup = New-RoleGroup -Name $AppName -Roles $exchange_roles
@@ -314,8 +316,8 @@ Function Create-ExchangeServicePrincipal {
 }
 Function Choose-Subscriptions {
 	param(
-		[bool] $Force=$false
-		,[bool] $NoSubscriptions=$false
+		[bool] $Force = $false
+		, [bool] $NoSubscriptions = $false
 	)
 	$Subscriptions = Get-AzSubscription
 	$SubscriptionIds = @()
@@ -332,9 +334,9 @@ Function Choose-Subscriptions {
 		Else {
 			$CreateRoles = Read-Host "Assign user/app roles for subscription '$SubscriptionName'? Y/N"
 		}
-		Switch ($CreateRoles){
-			Y {$CreateRoles = $true}
-			N {$CreateRoles = $false}
+		Switch ($CreateRoles) {
+			Y { $CreateRoles = $true }
+			N { $CreateRoles = $false }
 		}
 		if ($CreateRoles) {
 			$SubscriptionsUsed += ($Subscription | Select-Object -ExpandProperty Id)
@@ -372,13 +374,13 @@ Function Output-Results {
 }
 
 if (-not $AppName) {
-    $AppName = Read-Host "Enter the application name"
+	$AppName = Read-Host "Enter the application name"
 }
 if (($Create -eq $false -and $Delete -eq $false) -or ($Create -eq $true -and $Delete -eq $true)) {
 	$Create_read = Read-Host 'Do you want to create or delete a goose app and users? C/D'
-	Switch ($Create_read){
-		C {$Create = $true}
-		D {$Create = $false}
+	Switch ($Create_read) {
+		C { $Create = $true }
+		D { $Create = $false }
 	}
 }
 
@@ -404,6 +406,7 @@ Connect-ExchangeOnline -ShowBanner:$false -ExchangeEnvironmentName $ExchangeEnvi
 If ($Create) {
 	$SubscriptionsUsed = Choose-Subscriptions -Force $Force -NoSubscriptions $NoSubscriptions
 	$AppId, $ObjectId = Create-GooseApp -AppName $AppName -SubscriptionsUsed $SubscriptionsUsed
+	# Wait 30 seconds for the service principal to be created
 	Create-ExchangeServicePrincipal -AppId $AppId -AppName $AppName -ObjectId $ObjectId
 
 	# Generate secret and grab details needed for goosey conf

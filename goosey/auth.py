@@ -69,6 +69,9 @@ class Authentication():
         authority_uri = self.get_authority_url()
         self.logger.debug(f"App Authentication authority uri: {str(authority_uri)}")
         self.logger.debug(f"App authentication resource uri: {str(resource_uri)}")
+        #print(f"Client Secret: {self.client_secret}")  # Debugging purpose only, remove in production
+        #print(f"App Client ID: {self.app_client_id}")  # Debugging purpose only, remove in production
+        #input("Press Enter to continue...")  # Pause execution to await user confirmation
         context = msal.ConfidentialClientApplication(client_id=self.app_client_id, client_credential=self.client_secret, authority=authority_uri)
         self.tokendata = context.acquire_token_for_client(scopes=[resource_uri])
         if 'error' in self.tokendata:
@@ -137,6 +140,7 @@ class Authentication():
                 self.client_secret = config_get(self.authconfig, 'auth', 'clientsecret', self.logger)
             else:
                 self.client_secret = getpass.getpass("Please type your client secret: ")
+
             auth_dict["clientsecret"] = self.client_secret
         self.authconfig["auth"] = auth_dict
 
