@@ -101,7 +101,7 @@ Function Install-Single-Module {
 	# Download the module if it doesn't exist
 	If (-not (Get-Module -Name $ModuleName -ListAvailable)) {
 		Write-Host "Installing $ModuleName from default repository"
-		Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber
+		Install-Module -Name $ModuleName -RequiredVersion $Version -Force -AllowClobber -Scope CurrentUser
 	}
 	# Import it if not currently installed
 	If ($null -eq (Get-InstalledModule $ModuleName -RequiredVersion $Version)) {
