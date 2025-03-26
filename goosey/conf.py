@@ -139,7 +139,7 @@ def genconf(outpath_auth=".auth",
         # Check if appid is present. If so get the client secret by prompting
         if args["auth_appid"] and not args["auth_clientsecret"]:
             args["auth_clientsecret"] = input("Enter the Client Secret for the application: ")
-        print(f"Client secret that was entered, check carefully: {auth_clientsecret}")  # Debugging purpose only, remove in production
+        #print(f"Client secret that was entered, check carefully: {auth_clientsecret}")  # Debugging purpose only, remove in production
 
         # Generate the auth conf
         auth_s = genconfstring(args, docstring_params, "auth", "auth_")
