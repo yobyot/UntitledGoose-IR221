@@ -306,7 +306,7 @@ Function Create-ExchangeServicePrincipal {
 		Write-Host "Role Group '$AppName' created or exists"
 		# Associate the Exchange Online service principal with the new service principal
 		$ServicePrincipal = New-ServicePrincipal -AppId $AppId -ObjectId $ObjectId -DisplayName $AppName
-        Write-Host "Sleeping 60 seconds to allow Exchange service principal to be propagate"
+        Write-Host "Sleeping 60 seconds to allow Exchange service principal to propagate"
         Start-Sleep -Seconds 60
 	}
 	if ($ServicePrincipal) {
